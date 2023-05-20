@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>LoginPage.qml</file>
+        <file>TestPage.qml</file>
+        <file>SettingsPage.qml</file>
+        <file>SystemPage.qml</file>
+        <file>SearchPage.qml</file>
+        <file>Pages/HomePage/HomePage.qml</file>
+    </qresource>
+</RCC>
