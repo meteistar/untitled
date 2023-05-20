@@ -2,11 +2,17 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>LoginPage.qml</file>
-        <file>TestPage.qml</file>
         <file>SettingsPage.qml</file>
         <file>SystemPage.qml</file>
         <file>SearchPage.qml</file>
         <file>Pages/HomePage/HomePage.qml</file>
         <file>Pages/HomePage/SideBar.qml</file>
+        <file>Assets/profile.png</file>
+        <file>Assets/temperature.png</file>
+        <file>Assets/server.png</file>
+        <file>Assets/usb.png</file>
+        <file>Assets/wifi.png</file>
+        <file>Assets/usb-drive.png</file>
+        <file>Pages/TestPage/TestPage.qml</file>
     </qresource>
 </RCC>

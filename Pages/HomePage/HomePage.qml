@@ -62,7 +62,7 @@ Rectangle {
         width: 198
         height: 64
         radius: 12
-        color: "#DCFF06"
+        color: "#00AFFA"
         anchors{
             top: parent.top
             topMargin: 206
@@ -129,7 +129,7 @@ Rectangle {
         Text{
             text: "Search"
             anchors.centerIn: parent
-            color: "#00AFFA"
+            color: "#FF004D"
             font.pointSize: 31
         }
         MouseArea{
