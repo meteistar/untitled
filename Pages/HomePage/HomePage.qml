@@ -12,6 +12,8 @@ Rectangle {
         GradientStop{position: 1.0 ;color: "#CAD8DB"}
     }
 
+    SideBar{}
+
     Text {
         id: titleId
         text: qsTr("UPLAB")

@@ -7,5 +7,6 @@
         <file>SystemPage.qml</file>
         <file>SearchPage.qml</file>
         <file>Pages/HomePage/HomePage.qml</file>
+        <file>Pages/HomePage/SideBar.qml</file>
     </qresource>
 </RCC>
