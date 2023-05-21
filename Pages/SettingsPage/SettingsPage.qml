@@ -4,6 +4,8 @@ import QtGraphicalEffects 1.15
 Rectangle {
     id: root
 
+    property string buttonTitle: "default"
+
     gradient: Gradient{
         orientation: Gradient.Horizontal
         GradientStop{position: 0.0 ;color: "#DFE6EE"}
@@ -14,9 +16,9 @@ Rectangle {
         id: sidebar
 
         width: 213 ; height: parent.height
-        border.color: "#A9AC00"
-        border.width: 4
-
+//        border.color: "#A9AC00"
+//        border.width: 4
+        color: "gray"
         Rectangle{
             id: upperRect
 
@@ -225,7 +227,7 @@ Rectangle {
         border.color: "#A9AC00"
         border.width: 2
         Text{
-            text: "TEST"
+            text: root.buttonTitle
             anchors.centerIn: parent
             font.pointSize: 18
         }

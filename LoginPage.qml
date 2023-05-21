@@ -29,7 +29,7 @@ Rectangle{
         id: loginFrameId
 
         width: 406 ; height: 232
-        border.color: "#A9AC00"
+        border.color: "white"//"#372DFE"
         border.width: 1
         anchors.centerIn: parent
         radius: 45
@@ -85,13 +85,41 @@ Rectangle{
             anchors.top: passwordId.bottom
             anchors.topMargin: 17
             text: "LOGIN"
+            contentItem: Text{
+                color: 'white'
+                text: loginButtonId.text
+//                anchors.centerIn: loginButtonId
+                width: loginButtonId.width
+                height: loginButtonId.height
+                font.pointSize: 18
+            }
             x: 50
             y:100
+            background: Rectangle{
+                width: loginButtonId.width ; height: loginButtonId.height
+                radius: 24
+                gradient: Gradient{
+                    orientation: Gradient.Horizontal
+                    GradientStop{position: 0.0 ;color: "#2A8DEA"}
+                    GradientStop{position: 1.0 ;color: "#372DFE"}
+                }
+            }
+
             onClicked: {
                 stackLayout.currentIndex = 1
             }
         }
 
+    }
+
+    DropShadow {
+        anchors.fill: loginFrameId
+        horizontalOffset: 3
+        verticalOffset: 3
+        radius: 8.0
+        samples: 17
+        color: "#aa000000"//"#80000000"
+        source: loginFrameId
     }
 
     InputPanel {

@@ -14,5 +14,6 @@
         <file>Assets/wifi.png</file>
         <file>Assets/usb-drive.png</file>
         <file>Pages/TestPage/TestPage.qml</file>
+        <file>Pages/SettingsPage/SettingsPage.qml</file>
     </qresource>
 </RCC>
