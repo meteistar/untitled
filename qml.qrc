@@ -15,5 +15,9 @@
         <file>Assets/usb-drive.png</file>
         <file>Pages/TestPage/TestPage.qml</file>
         <file>Pages/SettingsPage/SettingsPage.qml</file>
+        <file>Pages/SettingsPage/Sidebar.qml</file>
+        <file>Pages/SettingsPage/MButton.qml</file>
+        <file>Pages/SystemPage/SystemPage.qml</file>
+        <file>Pages/BasePage.qml</file>
     </qresource>
 </RCC>
