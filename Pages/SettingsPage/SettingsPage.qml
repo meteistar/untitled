@@ -11,77 +11,81 @@ Rectangle {
         GradientStop{position: 0.0 ;color: "#DFE6EE"}
         GradientStop{position: 1.0 ;color: "#CAD8DB"}
     }
-
+    //TODO component yap
     Rectangle{
         id: sidebar
 
-        width: 213 ; height: parent.height
+        width: 113 ; height: parent.height
 //        border.color: "#A9AC00"
 //        border.width: 4
         color: "gray"
         Rectangle{
             id: upperRect
 
-            width: parent.width ; height: 143
-            border.color: "#A9AC00"
+            width: parent.width ; height: upperColumnId.implicitHeight+20
+            border.color: "#372DFE"
             border.width: 4
+            Column{
+                id: upperColumnId
 
-            Image{
-                source: "qrc:/Assets/profile.png"
-                x: 13 ; y:23
-            }
-            Text{
-                text: "Guest"
-                x: 50 ; y:23
-            }
-            Image{
-                source: "qrc:/Assets/temperature.png"
-                x: 75 ; y:23
-            }
-            Text{
-                text: "33 C"
-                x: 100 ; y:23
-            }
-            Image{
-                source: "qrc:/Assets/server.png"
-                x: 13 ; y: 50
-            }
-            Image{
-                source: "qrc:/Assets/wifi.png"
-                x: 53 ; y:50
-            }
-            Text{
-                id: timeLabelId
-                text: Qt.formatTime(new Date(),"hh:mm:ss")
-                x: 75 ; y:50
-//                anchors{
-//                    left: parent.left
-//                    leftMargin: 29
-//                    top: parent.top
-//                    topMargin: 158
-//                }
-            }
-            Timer {
-                id: timer
-                interval: 1000
-                repeat: true
-                running: true
-
-                onTriggered:
-                {
-                    timeLabelId.text =  Qt.formatTime(new Date(),"hh:mm:ss")
+                anchors.centerIn: parent
+                spacing: 10
+                Row{
+                    spacing: 5
+                    Image{
+                        source: "qrc:/Assets/profile.png"
+                        width: 30 ; height: 30
+                    }
+                    Text{
+                        text: "Guest"
+                        verticalAlignment: Text.AlignVCenter
+                        height: 30
+                    }
                 }
-            }
-            Text{
-                id: dateLabelId
-                text: Qt.formatDateTime(new Date(), "yyyy-MM-dd")
-                x: 75 ; y:75
-//                anchors{
-//                    left: parent.left
-//                    leftMargin: 29
-//                    top: parent.top
-//                    topMargin: 178
-//                }
+                Row{
+                    spacing: 5
+                    Image{
+                        source: "qrc:/Assets/temperature.png"
+                        width: 30 ; height: 30
+                    }
+                    Text{
+                        text: "33 C"
+                        verticalAlignment: Text.AlignVCenter
+                        height: 30
+                    }
+                }
+                Row{
+                    spacing: 5
+                    Image{
+                        source: "qrc:/Assets/server.png"
+                        width: 30 ; height: 30
+                    }
+                    Image{
+                        source: "qrc:/Assets/wifi.png"
+                        width: 30 ; height: 30
+                    }
+                }
+                Text{
+                    id: timeLabelId
+                    text: Qt.formatTime(new Date(),"hh:mm:ss")
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    Timer {
+                        id: timer
+                        interval: 1000
+                        repeat: true
+                        running: true
+
+                        onTriggered:
+                        {
+                            timeLabelId.text =  Qt.formatTime(new Date(),"hh:mm:ss")
+                        }
+                    }
+                }
+
+                Text{
+                    id: dateLabelId
+                    text: Qt.formatDateTime(new Date(), "yyyy-MM-dd")
+                }
             }
 
         }
@@ -93,127 +97,55 @@ Rectangle {
             anchors.top: upperRect.bottom
             anchors.bottom: parent.bottom
             anchors.left: parent.left
-            border.color: "#A9AC00"
+            border.color: "#372DFE"
             border.width: 4
-            Text{
-                text: "INCUBATOR 30 C"
-                anchors.horizontalCenter: parent.horizontalCenter
-                y: 5
-            }
-            Rectangle{
-                id: firstRectId
-                anchors.horizontalCenter: parent.horizontalCenter
-                y: 30
-                width: 190 ; height: 73
-                radius: 8
-                color: "transparent"
-                border{
-                    color: "#F8C70F"
-                    width: 3
-                }
-                Rectangle{
-                    width: 28 ; height: width
-                    radius: 5
-                    color: "#F8C70F"
-                    Text{
-                        text: "1"
-                        anchors.centerIn: parent
-                    }
-                }
-                Rectangle{
-                    width: 61 ; height: 61
-                    radius: 8
-                    color: "#F8C70F"
-                    anchors{
-                        verticalCenter: parent.verticalCenter
-                        right: parent.right
-                        rightMargin: 6
-                    }
-                    Text{
-                        id: firstTimerId
-                        property int minute: 14
-                        property int second: 59
-                        anchors.centerIn: parent
-                        text: minute + ":" + second
-                    }
-                    Timer {
-                        id: timer1
-                        interval: 1000
-                        repeat: true
-                        running: true
+            Column{
+                anchors.centerIn: parent
+                spacing: 10
 
-                        onTriggered:
-                        {
-                            firstTimerId.second--
-                            if(firstTimerId.second == 0){
-                                firstTimerId.second = 59
-                                firstTimerId.minute--
-                            }
-
-                        }
+                Row{
+                    spacing: 10
+                    Image{
+                        source: "qrc:/Assets/temperature.png"
+                        width: 30 ; height: 30
                     }
-                }
-            }
-            Rectangle{
-                id: secondRectId
-                anchors.horizontalCenter: parent.horizontalCenter
-                y: 110
-                width: 190 ; height: 73
-                radius: 8
-                color: "transparent"
-                border{
-                    color: "#12CDD4"
-                    width: 2
-                }
-                Rectangle{
-                    width: 28 ; height: width
-                    radius: 8
-                    color: "#12CDD4"
                     Text{
-                        text: "2"
-                        anchors.centerIn: parent
+                        text: "33 C"
+                        height: 30
+                        verticalAlignment: Text.AlignVCenter
                     }
                 }
                 Rectangle{
-                    width: 61 ; height: 61
+                    color: "#A9AC00"
+                    width: 46 ; height: 46
                     radius: 8
-                    color: "#12CDD4"
-                    anchors{
-                        verticalCenter: parent.verticalCenter
-                        right: parent.right
-                        rightMargin: 6
-                    }
-                }
-            }
-            Rectangle{
-                id: thirdRectId
-                anchors.horizontalCenter: parent.horizontalCenter
-                y: 200
-                width: 190 ; height: 73
-                radius: 8
-                color: "transparent"
-                border{
-                    color: "#CEE741"
-                    width: 2
+                    anchors.horizontalCenter: parent.horizontalCenter
                 }
                 Rectangle{
-                    width: 28 ; height: width
+                    border.color: "#A9AC00"
+                    border.width: 2
+                    color: "transparent"
+                    width: 46 ; height: 46
                     radius: 8
-                    color: "#12CDD4"
-                    Text{
-                        text: "3"
-                        anchors.centerIn: parent
-                    }
+                    anchors.horizontalCenter: parent.horizontalCenter
                 }
                 Rectangle{
-                    width: 61 ; height: 61
+                    color: "#DCFF06"
+                    width: 46 ; height: width
                     radius: 8
-                    color: "#CEE741"
-                    anchors{
-                        verticalCenter: parent.verticalCenter
-                        right: parent.right
-                        rightMargin: 6
-                    }
+                    anchors.horizontalCenter: parent.horizontalCenter
+                }
+                Rectangle{
+                    color: "#00AFFA"
+                    width: 46 ; height: width
+                    radius: 8
+                    anchors.horizontalCenter: parent.horizontalCenter
+                }
+                Rectangle{
+                    color: "#F9FC73"
+                    width: 46 ; height: width
+                    radius: 8
+                    anchors.horizontalCenter: parent.horizontalCenter
                 }
             }
         }
