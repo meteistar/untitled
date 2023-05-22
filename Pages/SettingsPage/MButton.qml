@@ -4,16 +4,19 @@ import QtQuick.Controls 2.15
 Button {
     id: root
 
+    width: 274 ; height: 54
+
     contentItem: Text{
         text: root.text
         color: "#ECF1FC"
         anchors.fill: parent
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
+        font.pointSize: 15
     }
 
     background: Rectangle{
-        width: 102 ; height: 31
+        width: 274 ; height: 54
         radius: 8
         gradient: Gradient{
             orientation: Gradient.Horizontal

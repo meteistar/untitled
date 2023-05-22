@@ -3,8 +3,6 @@
         <file>main.qml</file>
         <file>LoginPage.qml</file>
         <file>SettingsPage.qml</file>
-        <file>SystemPage.qml</file>
-        <file>SearchPage.qml</file>
         <file>Pages/HomePage/HomePage.qml</file>
         <file>Pages/HomePage/SideBar.qml</file>
         <file>Assets/profile.png</file>
@@ -19,5 +17,6 @@
         <file>Pages/SettingsPage/MButton.qml</file>
         <file>Pages/SystemPage/SystemPage.qml</file>
         <file>Pages/BasePage.qml</file>
+        <file>Pages/SearchPage/SearchPage.qml</file>
     </qresource>
 </RCC>

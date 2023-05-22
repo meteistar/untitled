@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtGraphicalEffects 1.15
-import "SettingsPage/Sidebar.qml" as MSidebar
-import "SettingsPage"
+import "SettingsPage" as MSettingsPage
+
 
 Rectangle {
     id: root
@@ -14,15 +14,18 @@ Rectangle {
         GradientStop{position: 1.0 ;color: "#CAD8DB"}
     }
 
-    MSidebar{}
+    MSettingsPage.Sidebar{id: sideBar}
 
-    MButton{
+    MSettingsPage.MButton{
         text: root.buttonTitle
-        x: 100
+        anchors.left: sideBar.right
     }
 
-    MButton{
+    MSettingsPage.MButton{
         text: "HOME"
-        x: 800
+        anchors.right: parent.right
+        onClicked: {
+            stackLayout.currentIndex = 1
+        }
     }
 }

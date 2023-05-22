@@ -5,7 +5,7 @@ import "../"
 BasePage {
     id: systemPageId
 
-    buttonTitle: "SYSTEM"
+    buttonTitle: "SEARCH"
 
 
 }

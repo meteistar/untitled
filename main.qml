@@ -6,6 +6,8 @@ import QtQuick.Layouts 1.15
 import "Pages/HomePage"
 import "Pages/TestPage"
 import "Pages/SettingsPage"
+import "Pages/SystemPage"
+import "Pages/SearchPage"
 
 Window {
     id: window
