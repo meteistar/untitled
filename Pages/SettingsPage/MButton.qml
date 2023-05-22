@@ -23,5 +23,6 @@ Button {
             GradientStop{position: 0.0 ;color: "#2A8DEA"}
             GradientStop{position: 1.0 ;color: "#372DFE"}
         }
+
     }
 }

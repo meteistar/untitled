@@ -1,14 +1,12 @@
 import QtQuick 2.15
 import QtGraphicalEffects 1.15
 
-Rectangle {
+import "../"
+
+BasePage{
     id: root
 
-    gradient: Gradient{
-        orientation: Gradient.Horizontal
-        GradientStop{position: 0.0 ;color: "#DFE6EE"}
-        GradientStop{position: 1.0 ;color: "#CAD8DB"}
-    }
+    buttonTitle: "TEST"
 
     Rectangle{
         id: sidebar

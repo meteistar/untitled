@@ -3,6 +3,8 @@ import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
 import QtQuick.VirtualKeyboard 2.15
 
+import "../../"
+
 Rectangle {
     id: root
 
@@ -27,34 +29,45 @@ Rectangle {
         anchors.topMargin: 60
     }
 
-    Rectangle{
-        id: test
-
-        width: 198
-        height: width
-        radius: 12
-        color: "#DCFF06"
+    BaseCard{
+        title: "TEST"
+        onClicked: stackLayout.currentIndex = 2
         anchors{
             top: parent.top
             topMargin: 206
             left: parent.left
             leftMargin: 327
         }
-
-        Text{
-            text: "TEST"
-            anchors.centerIn: parent
-            color: "#7B7B7B"
-            font.pointSize: 31
-        }
-        MouseArea{
-            anchors.fill: parent
-            onClicked: {
-                //goto test page
-                stackLayout.currentIndex = 2
-            }
-        }
     }
+
+//    Rectangle{
+//        id: test
+
+//        width: 198
+//        height: width
+//        radius: 12
+//        color: "#DCFF06"
+//        anchors{
+//            top: parent.top
+//            topMargin: 206
+//            left: parent.left
+//            leftMargin: 327
+//        }
+
+//        Text{
+//            text: "TEST"
+//            anchors.centerIn: parent
+//            color: "#7B7B7B"
+//            font.pointSize: 31
+//        }
+//        MouseArea{
+//            anchors.fill: parent
+//            onClicked: {
+//                //goto test page
+//                stackLayout.currentIndex = 2
+//            }
+//        }
+//    }
 
     Rectangle{
         id: settings

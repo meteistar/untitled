@@ -18,5 +18,28 @@
         <file>Pages/SystemPage/SystemPage.qml</file>
         <file>Pages/BasePage.qml</file>
         <file>Pages/SearchPage/SearchPage.qml</file>
+        <file>BaseCard.qml</file>
+        <file>Constants.qml</file>
+        <file>qmldir</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-Black.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-BlackItalic.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-Bold.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-BoldItalic.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-ExtraBold.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-ExtraLight.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-ExtraLightItalic.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-Italic.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-Light.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-LightItalic.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-Medium.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-MediumItalic.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-Regular.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-SemiBold.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-SemiBoldItalic.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-Thin.ttf</file>
+        <file>Assets/Fonts/Montserrat/Montserrat-ThinItalic.ttf</file>
+        <file>Pages/SearchPage/SButton.qml</file>
+        <file>Assets/arrow.png</file>
     </qresource>
 </RCC>
