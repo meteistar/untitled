@@ -200,7 +200,6 @@ Rectangle {
             id: upArrow
             source: "qrc:/Assets/arrow.png"
             width: 30 ; height: width
-//            x:556 ; y:480
 
             MouseArea{
                 anchors.fill: parent
@@ -210,7 +209,6 @@ Rectangle {
         Text{
             text: "1/4"
             width:46
-//            x: 598 ; y: 480
             font{
                 family: Constants.montserratNormal.name
                 pixelSize: 22
@@ -224,7 +222,6 @@ Rectangle {
             source: "qrc:/Assets/arrow.png"
             rotation: 180
             width: 30 ; height: width
-//            x:665 ; y:480
 
             MouseArea{
                 anchors.fill: parent

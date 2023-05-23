@@ -49,5 +49,6 @@
         <file>PrimaryButton.qml</file>
         <file>SecondaryButton.qml</file>
         <file>Pages/SettingsPage/ReagentPage.qml</file>
+        <file>Pages/SettingsPage/DateTimePage.qml</file>
     </qresource>
 </RCC>
