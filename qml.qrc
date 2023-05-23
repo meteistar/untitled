@@ -41,5 +41,13 @@
         <file>Assets/Fonts/Montserrat/Montserrat-ThinItalic.ttf</file>
         <file>Pages/SearchPage/SButton.qml</file>
         <file>Assets/arrow.png</file>
+        <file>Pages/SettingsPage/MenuButton.qml</file>
+        <file>Pages/SettingsPage/WifiPage.qml</file>
+        <file>Pages/SettingsPage/LisPage.qml</file>
+        <file>Pages/SettingsPage/TemperaturePage.qml</file>
+        <file>MToggleButton.qml</file>
+        <file>PrimaryButton.qml</file>
+        <file>SecondaryButton.qml</file>
+        <file>Pages/SettingsPage/ReagentPage.qml</file>
     </qresource>
 </RCC>

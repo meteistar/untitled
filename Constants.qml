@@ -20,7 +20,13 @@ QtObject {
         GradientStop{position: 1.0 ;color: "#CAD8DB"}
     }
 
+    readonly property Gradient blueGradient: Gradient{
+        orientation: Gradient.Horizontal
+        GradientStop{position: 0.0 ;color: "#2A8DEA"}
+        GradientStop{position: 1.0 ;color: "#372DFE"}
+    }
     readonly property color darkTextColor: "#2F3C4E"
+    readonly property color textWhite: "#ECF1FC"
     readonly property color text1Color: "#818584"
     readonly property color text2Color: "#8492A6"
     readonly property color validColor: "#D9FFF2"
