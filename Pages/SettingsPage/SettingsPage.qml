@@ -20,6 +20,8 @@ BasePage{
         TemperaturePage{}
         ReagentPage{}
         DateTimePage{}
+        LanguagePage{}
+        UsersPage{}
     }
 
     Rectangle{
