@@ -15,7 +15,7 @@ Button{
 
         Rectangle{
             anchors.centerIn: parent
-            width: 108 ; height: 40
+            width: parent.width-4 ; height: parent.height-4
             radius: 8
             gradient: Constants.bg
         }

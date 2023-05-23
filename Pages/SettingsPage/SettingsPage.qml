@@ -19,6 +19,7 @@ BasePage{
         LisPage{}
         TemperaturePage{}
         ReagentPage{}
+        DateTimePage{}
     }
 
     Rectangle{
