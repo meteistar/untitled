@@ -153,8 +153,8 @@ Rectangle {
             }
         }
     }
-    Button{
-        id: logout
+    SecondaryButton{
+        id: logoutButton
 
         anchors{
             bottom: parent.bottom
@@ -170,4 +170,22 @@ Rectangle {
             stackLayout.currentIndex = 0
         }
     }
+
+//    Button{
+//        id: logout
+
+//        anchors{
+//            bottom: parent.bottom
+//            bottomMargin: 23
+//            right: parent.right
+//            rightMargin: 39
+//        }
+
+//        text: "LOGOUT"
+//        width: 170 ; height: 45
+
+//        onClicked: {
+//            stackLayout.currentIndex = 0
+//        }
+//    }
 }
