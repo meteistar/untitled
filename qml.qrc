@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>LoginPage.qml</file>
         <file>SettingsPage.qml</file>
         <file>Pages/HomePage/HomePage.qml</file>
         <file>Pages/HomePage/SideBar.qml</file>
@@ -52,5 +51,10 @@
         <file>Pages/SettingsPage/DateTimePage.qml</file>
         <file>Pages/SettingsPage/LanguagePage.qml</file>
         <file>Pages/SettingsPage/UsersPage.qml</file>
+        <file>Pages/LoginPage/LoginPage.qml</file>
+        <file>Assets/usa.png</file>
+        <file>Assets/test.png</file>
+        <file>Pages/SystemPage/SystemCheck.qml</file>
+        <file>Pages/SystemPage/Reagent.qml</file>
     </qresource>
 </RCC>

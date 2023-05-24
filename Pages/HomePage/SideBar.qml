@@ -1,26 +1,32 @@
 import QtQuick 2.0
 
+import "../../"
+
 Rectangle {
     id: root
 
     width: 137 ; height: parent.height
 
-    color: 'transparent'
-    border{
-        width: 4
-        color: "#A9AC00"
+    gradient: Constants.blueGradient
 
+    Rectangle{
+        anchors.centerIn: parent
+        width: parent.width-8
+        height: parent.height-8
+        gradient: Constants.bg
     }
 
     Rectangle{
         id: upperRect
 
         width: parent.width ; height: 225
-        color: 'transparent'
-        border{
-            width: 4
-            color: "#A9AC00"
+        gradient: Constants.blueGradient
 
+        Rectangle{
+            anchors.centerIn: parent
+            width: parent.width-8
+            height: parent.height-8
+            gradient: Constants.bg
         }
 
         Image{

@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.15
+import QtGraphicalEffects 1.15
 
 Button{
     id: control
@@ -13,6 +14,7 @@ Button{
         gradient: Constants.blueGradient
     }
     contentItem: Text{
+        id: mete
         text: control.text
         anchors.fill: parent
         verticalAlignment: Text.AlignVCenter
@@ -22,5 +24,6 @@ Button{
             family: Constants.montserratNormal.name
             pixelSize: 22
         }
+
     }
 }

@@ -3,6 +3,7 @@ import QtQuick.Window 2.15
 import QtQuick.VirtualKeyboard 2.15
 import QtQuick.Layouts 1.15
 
+import "Pages/LoginPage"
 import "Pages/HomePage"
 import "Pages/TestPage"
 import "Pages/SettingsPage"
@@ -70,33 +71,33 @@ Window {
 //        }
 //    }
 
-//    InputPanel {
-//        id: inputPanel
-//        z: 99
-//        x: 0
-//        y: window.height
-//        width: window.width
+    InputPanel {
+        id: inputPanel
+        z: 99
+        x: 0
+        y: window.height
+        width: window.width
 
-//        states: State {
-//            name: "visible"
-//            when: inputPanel.active
-//            PropertyChanges {
-//                target: inputPanel
-//                y: window.height - inputPanel.height
-//            }
-//        }
-//        transitions: Transition {
-//            from: ""
-//            to: "visible"
-//            reversible: true
-//            ParallelAnimation {
-//                NumberAnimation {
-//                    properties: "y"
-//                    duration: 250
-//                    easing.type: Easing.InOutQuad
-//                }
-//            }
-//        }
-//    }
+        states: State {
+            name: "visible"
+            when: inputPanel.active
+            PropertyChanges {
+                target: inputPanel
+                y: window.height - inputPanel.height
+            }
+        }
+        transitions: Transition {
+            from: ""
+            to: "visible"
+            reversible: true
+            ParallelAnimation {
+                NumberAnimation {
+                    properties: "y"
+                    duration: 250
+                    easing.type: Easing.InOutQuad
+                }
+            }
+        }
+    }
 
 }

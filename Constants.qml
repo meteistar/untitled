@@ -6,7 +6,7 @@ QtObject {
     readonly property FontLoader montserratNormal: FontLoader {
         source: "qrc:/Assets/Fonts/Montserrat/Montserrat-Regular.ttf"
     }
-    readonly property int h1: 45
+    readonly property int h1: 36
     readonly property int h2: 26
     readonly property int h3: 18
     readonly property int h4: 16
@@ -35,5 +35,5 @@ QtObject {
     readonly property color inactiveColor:"#B8D3FF"
     readonly property color activeColor:"#FFFFFF"
     readonly property color primaryColor: "#372DFE"
-    readonly property color outlineColor: "#E6E6E6"
+    readonly property color outlineColor: "#818584"
 }
