@@ -5,8 +5,6 @@ Button{
     id: control
 
     width: 112 ; height: 44
-//    x:613 ; y:510
-
     text: "Default"
     background: Rectangle{
         anchors.fill: parent

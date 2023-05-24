@@ -56,5 +56,11 @@
         <file>Assets/test.png</file>
         <file>Pages/SystemPage/SystemCheck.qml</file>
         <file>Pages/SystemPage/Reagent.qml</file>
+        <file>Pages/SystemPage/Service.qml</file>
+        <file>Assets/ethernetConfiguration.png</file>
+        <file>Assets/firmwareUpgrade.png</file>
+        <file>Assets/onlineUpgrade.png</file>
+        <file>Assets/softwareUpgrade.png</file>
+        <file>Pages/SystemPage/Adjustment.qml</file>
     </qresource>
 </RCC>

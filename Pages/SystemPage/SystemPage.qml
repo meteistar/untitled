@@ -17,6 +17,9 @@ BasePage {
         anchors.fill: parent
 
         SystemCheck{}
+        Reagent{}
+        Service{}
+        Adjustment{}
     }
 
     Rectangle{
