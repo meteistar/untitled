@@ -302,109 +302,70 @@ BasePage{
         text: root.buttonTitle
         anchors.left: sidebar.right
     }
-    //TODO componenta cevir
-//    Rectangle{
-//        id: testButton
-
-//        x:213
-//        width: 221 ; height: 51
-//        border.color: "#A9AC00"
-//        border.width: 2
-//        Text{
-//            text: "TEST"
-//            anchors.centerIn: parent
-//            font.pointSize: 18
-//        }
-//    }
-    //TODO componenta cevir
-//    Rectangle{
-//        id: homeButton
-
-//        x:803
-//        width: 221 ; height: 51
-//        border.color: "#A9AC00"
-//        border.width: 2
-//        Text{
-//            text: "HOME"
-//            anchors.centerIn: parent
-//            font.pointSize: 18
-//        }
-//    }
 
     Rectangle{
         id: testInfoId
         width: 373 ; height: 150
-        radius: 10
-        gradient: Gradient{
-            orientation: Gradient.Horizontal
-            GradientStop{position: 0.0 ;color: "#FEFEFE"}
-            GradientStop{position: 1.0 ;color: "#ECEDF1"}
-        }
+        radius: 26
+        gradient: Constants.blueGradient
         x:260 ; y:100
-//        border{
-//            color: "#372DFE"
-//            width: 3
-//        }
+
         Rectangle{
-            width: 102 ; height: 31
-            gradient: Gradient{
-                orientation: Gradient.Horizontal
-                GradientStop{position: 0.0 ;color: "#2A8DEA"}
-                GradientStop{position: 1.0 ;color: "#372DFE"}
+            width: parent.width-4 ; height: parent.height-4
+            radius: 26
+            anchors.centerIn: parent
+            color: 'white'
+        }
+        Text{
+            text: "Test Info"
+            y: -30
+            font{
+                family: Constants.montserratNormal.name
+                pointSize: 16
             }
-            Text{
-                text: "Test Info"
-                anchors.centerIn: parent
-                color: "#ECF1FC"
+
+            color: Constants.darkTextColor
+        }
+
+        Row{
+            spacing: 32
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 13
+            PrimaryButton{
+                text: 'FROM<br>INCUBATOR'
+            }
+            SecondaryButton{
+                text: 'DETAILED<br>INFO'
             }
         }
-    }
-
-    DropShadow {
-        anchors.fill: testInfoId
-        horizontalOffset: 3
-        verticalOffset: 3
-        radius: 8.0
-        samples: 17
-        color: "#BCC4C9"//"#80000000"
-        source: testInfoId
     }
 
     Rectangle{
         id: testModeId
         width: 373 ; height: 150
-        radius: 10
-        gradient: Gradient{
-            orientation: Gradient.Horizontal
-            GradientStop{position: 0.0 ;color: "#FEFEFE"}
-            GradientStop{position: 1.0 ;color: "#ECEDF1"}
+        radius: 26
+        gradient: Constants.blueGradient
+        x:672 ; y:100
+
+        Rectangle{
+            width: parent.width-4 ; height: parent.height-4
+            radius: 26
+            anchors.centerIn: parent
+            color: 'white'
         }
-        x:760 ; y:100
-//        border{
-//            color: "#372DFE"
-//            width: 3
-//        }
         Text{
-            text: "Test Info"
-//            anchors.centerIn: parent
-            x: 5 ; y:5
-            color: "#3D3D3D"
-            font.bold: true
-            font.pointSize: 14
+            text: "Test Mode"
+            y: -30
+            font{
+                family: Constants.montserratNormal.name
+                pointSize: 16
+            }
+
+            color: Constants.darkTextColor
         }
-//        Rectangle{
-//            width: 102 ; height: 31
-//            gradient: Gradient{
-//                orientation: Gradient.Horizontal
-//                GradientStop{position: 0.0 ;color: "#2A8DEA"}
-//                GradientStop{position: 1.0 ;color: "#372DFE"}
-//            }
-//            Text{
-//                text: "Test Info"
-//                anchors.centerIn: parent
-//                color: "#ECF1FC"
-//            }
-//        }
+
+        //TODO standart quick
         Rectangle{
             anchors.centerIn: parent
             width: 250 ; height: 50
@@ -421,13 +382,63 @@ BasePage{
         }
     }
 
-    DropShadow {
-        anchors.fill: testInfoId
-        horizontalOffset: 3
-        verticalOffset: 3
-        radius: 8.0
-        samples: 17
-        color: "#BCC4C9"//"#80000000"
-        source: testInfoId
-    }
+//    DropShadow {
+//        anchors.fill: testInfoId
+//        horizontalOffset: 3
+//        verticalOffset: 3
+//        radius: 8.0
+//        samples: 17
+//        color: "#BCC4C9"//"#80000000"
+//        source: testInfoId
+//    }
+
+//    Rectangle{
+////        id: testModeId
+//        width: 373 ; height: 150
+//        radius: 10
+//        gradient: Gradient{
+//            orientation: Gradient.Horizontal
+//            GradientStop{position: 0.0 ;color: "#FEFEFE"}
+//            GradientStop{position: 1.0 ;color: "#ECEDF1"}
+//        }
+//        x:760 ; y:100
+////        border{
+////            color: "#372DFE"
+////            width: 3
+////        }
+//        Text{
+//            text: "Test Info"
+////            anchors.centerIn: parent
+//            x: 5 ; y:5
+//            color: "#3D3D3D"
+//            font.bold: true
+//            font.pointSize: 14
+//        }
+////        Rectangle{
+////            width: 102 ; height: 31
+////            gradient: Gradient{
+////                orientation: Gradient.Horizontal
+////                GradientStop{position: 0.0 ;color: "#2A8DEA"}
+////                GradientStop{position: 1.0 ;color: "#372DFE"}
+////            }
+////            Text{
+////                text: "Test Info"
+////                anchors.centerIn: parent
+////                color: "#ECF1FC"
+////            }
+////        }
+
+//    }
+
+//    DropShadow {
+//        anchors.fill: testInfoId
+//        horizontalOffset: 3
+//        verticalOffset: 3
+//        radius: 8.0
+//        samples: 17
+//        color: "#BCC4C9"//"#80000000"
+//        source: testInfoId
+//    }
+
+
 }
