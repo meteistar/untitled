@@ -1,4 +1,6 @@
 import QtQuick 2.0
+import QtGraphicalEffects 1.15
+import QtQuick.Layouts 1.15
 
 import "../../"
 
@@ -9,12 +11,13 @@ Rectangle {
 
     gradient: Constants.blueGradient
 
-    Rectangle{
-        anchors.centerIn: parent
-        width: parent.width-8
-        height: parent.height-8
-        gradient: Constants.bg
-    }
+//    Rectangle{
+//        anchors.centerIn: parent
+//        width: parent.width-8
+//        height: parent.height-8
+//        gradient: Constants.bg
+////        color: "transparent"
+//    }
 
     Rectangle{
         id: upperRect
@@ -22,124 +25,173 @@ Rectangle {
         width: parent.width ; height: 225
         gradient: Constants.blueGradient
 
-        Rectangle{
-            anchors.centerIn: parent
-            width: parent.width-8
-            height: parent.height-8
-            gradient: Constants.bg
+//        Rectangle{
+//            anchors.centerIn: parent
+//            width: parent.width-8
+//            height: parent.height-8
+//            gradient: Constants.bg
+////            color: 'white'
+//        }
+        Column{
+            anchors.fill: parent
+            Row{
+                width: parent.width
+                height: 55
+                Rectangle{
+                    width: 44 ; height: parent.height
+                    color: 'transparent'
+                    Image{
+                        id: profileIcon
+
+                        source: "qrc:/Assets/profile.png"
+                        anchors.centerIn: parent
+                        ColorOverlay{
+                            anchors.fill: profileIcon
+                            source: profileIcon
+                            color: "white"
+                        }
+                    }
+                }
+                Rectangle{
+                    width: 93 ; height: parent.height
+                    color: 'transparent'
+                    Text{
+                        anchors.verticalCenter: parent.verticalCenter
+                        text: "Guest"
+                        font.pixelSize: 13
+                        font.family: Constants.montserratNormal.name
+                        color: 'white'
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                    }
+                }
+            }
+
+            Row{
+                width: parent.width
+                height: 55
+                Rectangle{
+                    width: 44
+                    height: parent.height
+                    color: 'transparent'
+                    Image{
+                        id: temperatureIcon
+
+                        anchors.centerIn: parent
+                        source: "qrc:/Assets/temperature.png"
+                        ColorOverlay{
+                            anchors.fill: temperatureIcon
+                            source: temperatureIcon
+                            color: 'white'
+                        }
+                    }
+                }
+                Rectangle{
+                    width: 93 ; height: parent.height
+                    color: 'transparent'
+                    Text{
+                        anchors.verticalCenter: parent.verticalCenter
+                        text: '33 C'
+                        color: 'white'
+                        font{
+                            family: Constants.montserratNormal.name
+                            pixelSize: 13
+                        }
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                    }
+                }
+            }
+
+            Row{
+                width: parent.width
+                height: 55
+                Rectangle{
+                    width: 137/3
+                    height: parent.height
+                    color: 'transparent'
+                    Image{
+                        id: serverIconId
+                        anchors.centerIn: parent
+                        source: "qrc:/Assets/server.png"
+                        ColorOverlay{
+                            anchors.fill: serverIconId
+                            source: serverIconId
+                            color: 'white'
+                        }
+                    }
+                }
+                Rectangle{
+                    width: 137/3
+                    height: parent.height
+                    color: 'transparent'
+                    Image{
+                        id: usbIconId
+                        anchors.centerIn: parent
+                        source: "qrc:/Assets/usb-drive.png"
+                        width: 22 ; height: 22
+                        ColorOverlay{
+                            anchors.fill: usbIconId
+                            source: usbIconId
+                            color: 'white'
+                        }
+                    }
+                }
+                Rectangle{
+                    width: 137/3
+                    height: parent.height
+                    color: 'transparent'
+                    Image{
+                        id: wifiIcon
+
+                        anchors.centerIn: parent
+                        source: "qrc:/Assets/wifi.png"
+                        ColorOverlay{
+                            anchors.fill: wifiIcon
+                            source: wifiIcon
+                            color: 'white'
+                        }
+                    }
+                }
+            }
+
+            Text{
+                id: timeLabelId
+                width: parent.width
+                height: 27
+                horizontalAlignment: Text.AlignHCenter
+                text: Qt.formatTime(new Date(),"hh:mm:ss")
+                color: 'white'
+            }
+            Timer {
+                id: timer
+                interval: 1000
+                repeat: true
+                running: true
+
+                onTriggered:
+                {
+                    timeLabelId.text =  Qt.formatTime(new Date(),"hh:mm:ss")
+                }
+            }
+            Text{
+                id: dateLabelId
+
+                width: parent.width
+                height: 27
+                horizontalAlignment: Text.AlignHCenter
+                text: Qt.formatDateTime(new Date(), "yyyy-MM-dd")
+                color: 'white'
+            }
+
+            Rectangle{
+                width: parent.width
+                height: 2
+                color: 'white'
+            }
         }
 
-        Image{
-            id: profileIcon
 
-            source: "qrc:/Assets/profile.png"
-            anchors{
-                left: parent.left
-                leftMargin: 17
-                top: parent.top
-                topMargin: 23
-            }
-        }
-        Text{
-            text: "Guest"
-            font.pointSize: 13
-            color: 'black'
-            anchors{
-                left: parent.left
-                leftMargin: 60
-                top: parent.top
-                topMargin: 17
-            }
-        }
-        //2nd row
-        Image{
-            id: temperatureIcon
-
-            source: "qrc:/Assets/temperature.png"
-            anchors{
-                left: parent.left
-                leftMargin: 20
-                top: parent.top
-                topMargin: 67
-            }
-        }
-        Text{
-            text: "33 C"
-            font.pointSize: 13
-            color: 'black'
-            anchors{
-                left: parent.left
-                leftMargin: 60
-                top: parent.top
-                topMargin: 69
-            }
-        }
-        //3nd row
-        Image{
-            id: serverIcon
-
-            source: "qrc:/Assets/server.png"
-            anchors{
-                left: parent.left
-                leftMargin: 20
-                top: parent.top
-                topMargin: 122
-            }
-        }
-        Image{
-            id: usbIcon
-
-            source: "qrc:/Assets/usb-drive.png"
-            anchors{
-                left: parent.left
-                leftMargin: 50
-                top: parent.top
-                topMargin: 117
-            }
-            width: 22 ; height: 22
-        }
-        Image{
-            id: wifiIcon
-
-            source: "qrc:/Assets/wifi.png"
-            anchors{
-                left: parent.left
-                leftMargin: 87
-                top: parent.top
-                topMargin: 117
-            }
-        }
-        Text{
-            id: timeLabelId
-            text: Qt.formatTime(new Date(),"hh:mm:ss")
-            anchors{
-                left: parent.left
-                leftMargin: 29
-                top: parent.top
-                topMargin: 158
-            }
-        }
-        Timer {
-            id: timer
-            interval: 1000
-            repeat: true
-            running: true
-
-            onTriggered:
-            {
-                timeLabelId.text =  Qt.formatTime(new Date(),"hh:mm:ss")
-            }
-        }
-        Text{
-            id: dateLabelId
-            text: Qt.formatDateTime(new Date(), "yyyy-MM-dd")
-            anchors{
-                left: parent.left
-                leftMargin: 29
-                top: parent.top
-                topMargin: 178
-            }
-        }
 
     }
 
@@ -148,25 +200,61 @@ Rectangle {
 
         anchors.top: upperRect.bottom
         //bottom part
-        Image{
-            source: "qrc:/Assets/temperature.png"
-            anchors{
-                left: parent.left
-                leftMargin: 20
-                top: parent.top
-                topMargin: 14
-            }
-        }
-        Text{
+        Row{
             id: temperature2Id
-            text: "33 C"
-            anchors{
-                left: parent.left
-                leftMargin: 60
-                top: parent.top
-                topMargin: 15
+            width: parent.width
+            height: 55
+            Rectangle{
+                width: 44
+                height: parent.height
+                color: 'transparent'
+                Image{
+                    source: 'qrc:/Assets/temperature.png'
+                    anchors.centerIn: parent
+                    ColorOverlay{
+                        anchors.fill: parent
+                        source: parent
+                        color: 'white'
+                    }
+                }
+            }
+            Rectangle{
+                width: 93
+                height: parent.height
+                color: 'transparent'
+                Text{
+                    anchors.verticalCenter: parent.verticalCenter
+                    text: '33 C'
+                    color: 'white'
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: 13
+                    }
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                }
             }
         }
+
+//        Image{
+//            source: "qrc:/Assets/temperature.png"
+//            anchors{
+//                left: parent.left
+//                leftMargin: 20
+//                top: parent.top
+//                topMargin: 14
+//            }
+//        }
+//        Text{
+//            id: temperature2Id
+//            text: "33 C"
+//            anchors{
+//                left: parent.left
+//                leftMargin: 60
+//                top: parent.top
+//                topMargin: 15
+//            }
+//        }
 
         Column{
 //            anchors.horizontalCenter: parent.horizontalCenter

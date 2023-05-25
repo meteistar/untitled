@@ -22,10 +22,11 @@ Rectangle {
         id: logo
 
         text: 'UPLAB'
-        color: 'red'
+//        color: 'red'
+        visible: false
         font{
-            family: Constants.montserratNormal.name
-            pixelSize: Constants.h1
+//            family: Constants.montserratNormal.name
+            pointSize: 36
             bold: true
         }
 
@@ -34,6 +35,12 @@ Rectangle {
             top: parent.top
             topMargin: 60
         }
+    }
+
+    LinearGradient{
+        anchors.fill: logo
+        source: logo
+        gradient: Constants.blueGradient
     }
 
     Rectangle{

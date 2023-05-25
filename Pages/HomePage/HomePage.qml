@@ -26,11 +26,22 @@ Rectangle {
             pointSize: 36
             bold: true
         }
-        color: 'red'
+//        color: 'red'
+        visible: false
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.top: parent.top
         anchors.topMargin: 60
     }
+
+    LinearGradient{
+        anchors.fill: titleId
+        source: titleId
+        gradient: Gradient{
+            GradientStop{position: 0.0 ;color: "#2A8DEA"}
+            GradientStop{position: 1.0 ;color: "#372DFE"}
+        }
+    }
+
 
     Rectangle {
         id: test

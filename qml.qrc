@@ -62,5 +62,6 @@
         <file>Assets/onlineUpgrade.png</file>
         <file>Assets/softwareUpgrade.png</file>
         <file>Pages/SystemPage/Adjustment.qml</file>
+        <file>Pages/SystemPage/QC.qml</file>
     </qresource>
 </RCC>

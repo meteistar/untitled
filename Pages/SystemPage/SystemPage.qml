@@ -20,6 +20,7 @@ BasePage {
         Reagent{}
         Service{}
         Adjustment{}
+        QC{}
     }
 
     Rectangle{
@@ -37,7 +38,8 @@ BasePage {
     MenuButton{
         id: wifiButtonId
         text: "System Check"
-        y: 69
+        height: 87
+        y: 85
         onClicked: {
             lisButtonId.pressedd = false
             tempButtonId.pressedd = false
@@ -50,7 +52,8 @@ BasePage {
     MenuButton{
         id: lisButtonId
         text: "Reagent"
-        y: 145
+        height: 87
+        y: 188
         onClicked: {
             wifiButtonId.pressedd = false
             tempButtonId.pressedd = false
@@ -63,7 +66,8 @@ BasePage {
     MenuButton{
         id: tempButtonId
         text: "Service"
-        y: 220
+        height: 87
+        y: 292
         onClicked: {
             wifiButtonId.pressedd = false
             lisButtonId.pressedd = false
@@ -76,7 +80,8 @@ BasePage {
     MenuButton{
         id: reagentButtonId
         text: "Adjustment"
-        y: 298
+        height: 87
+        y: 395
         onClicked: {
             wifiButtonId.pressedd = false
             lisButtonId.pressedd = false
@@ -89,7 +94,8 @@ BasePage {
     MenuButton{
         id: dateTimeButtonId
         text: "QC"
-        y: 374
+        height: 87
+        y: 498
         onClicked: {
             wifiButtonId.pressedd = false
             lisButtonId.pressedd = false
