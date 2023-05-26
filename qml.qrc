@@ -63,5 +63,10 @@
         <file>Assets/softwareUpgrade.png</file>
         <file>Pages/SystemPage/Adjustment.qml</file>
         <file>Pages/SystemPage/QC.qml</file>
+        <file>Assets/insertCartridge.svg</file>
+        <file>Assets/insertCartridge.png</file>
+        <file>Pages/TestPage/IncubatorSlot.qml</file>
+        <file>Pages/TestPage/MainTestPage.qml</file>
+        <file>Pages/TestPage/DetailedInfo.qml</file>
     </qresource>
 </RCC>
