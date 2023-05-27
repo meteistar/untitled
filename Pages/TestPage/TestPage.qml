@@ -229,8 +229,11 @@ BasePage{
         id: testStackLayout
         anchors.fill: parent
 
+        currentIndex: 2
+
         MainTestPage{}
         DetailedInfo{}
+        Result{}
     }
 
 }

@@ -6,6 +6,8 @@ import "../../"
 Rectangle {
     id: root
 
+    property bool isTestSlotEmpty: false
+
     color: 'transparent'
 
     Rectangle{
@@ -210,6 +212,7 @@ Rectangle {
         radius: 39
         x: 260 ; y: 305
         Image{
+            visible: isTestSlotEmpty
             source: 'qrc:/Assets/insertCartridge.png'
             width: 569
             height: 255
@@ -218,6 +221,7 @@ Rectangle {
             anchors.topMargin: -16
         }
         Text{
+            visible: isTestSlotEmpty
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 15
@@ -229,6 +233,13 @@ Rectangle {
                 family: Constants.montserratNormal.name
                 pointSize: 16
             }
+        }
+
+        CircularProgressBar{
+            id: bar
+
+            anchors.centerIn: parent
+            current: 25
         }
     }
 

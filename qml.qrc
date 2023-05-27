@@ -68,5 +68,7 @@
         <file>Pages/TestPage/IncubatorSlot.qml</file>
         <file>Pages/TestPage/MainTestPage.qml</file>
         <file>Pages/TestPage/DetailedInfo.qml</file>
+        <file>Pages/TestPage/CircularProgressBar.qml</file>
+        <file>Pages/TestPage/Result.qml</file>
     </qresource>
 </RCC>

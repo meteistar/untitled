@@ -8,6 +8,11 @@ Rectangle {
 
     color: 'transparent'
 
+    MouseArea{
+        anchors.fill: parent
+        onClicked: focus = true
+    }
+
     Text{
         text: 'Detailed Info'
         anchors.centerIn: parent
@@ -387,7 +392,34 @@ Rectangle {
                     }
                 }
             }
-
+            Row{
+                Text{
+                    width: 121 ; height: 24
+                    text: 'Note'
+                    verticalAlignment: Text.AlignVCenter
+                    color:Constants.text1Color
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: 16
+                    }
+                }
+                Rectangle{
+                    width: 535 ; height: 24
+                    color: 'transparent'
+                    border.color: Constants.text1Color
+                    TextInput{
+                        anchors.fill: parent
+                        text: ""
+                        color: Constants.text1Color
+                        verticalAlignment: Text.AlignVCenter
+                        leftPadding: 10
+                        font{
+                            family: Constants.montserratNormal.name
+                            pixelSize: 16
+                        }
+                    }
+                }
+            }
 
 
 
