@@ -220,10 +220,17 @@ BasePage{
         }
     }
 
-    MButton{
+    PrimaryButton{
+        enabled: false
+        width: 274 ; height: 54
         text: root.buttonTitle
         anchors.left: sidebar.right
     }
+
+//    MButton{
+//        text: root.buttonTitle
+//        anchors.left: sidebar.right
+//    }
 
     StackLayout{
         id: testStackLayout

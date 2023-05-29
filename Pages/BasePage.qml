@@ -13,12 +13,26 @@ Rectangle {
 
     MSettingsPage.Sidebar{id: sideBar}
 
-    MSettingsPage.MButton{
+//    MSettingsPage.MButton{
+//        text: root.buttonTitle
+//        anchors.left: sideBar.right
+//    }
+
+    PrimaryButton{
+        width: 274; height: 54
         text: root.buttonTitle
         anchors.left: sideBar.right
     }
+//    MSettingsPage.MButton{
+//        text: "HOME"
+//        anchors.right: parent.right
+//        onClicked: {
+//            stackLayout.currentIndex = 1
+//        }
+//    }
 
-    MSettingsPage.MButton{
+    PrimaryButton{
+        width: 274; height: 54
         text: "HOME"
         anchors.right: parent.right
         onClicked: {

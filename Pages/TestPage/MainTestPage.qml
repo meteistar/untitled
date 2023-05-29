@@ -102,9 +102,11 @@ Rectangle {
             anchors.bottom: parent.bottom
             anchors.bottomMargin: 13
             PrimaryButton{
+                fontSize: 16
                 text: 'FROM<br>INCUBATOR'
             }
             SecondaryButton{
+                fontSize: 16
                 text: 'DETAILED<br>INFO'
                 onClicked: {
                     //goto to detailed page

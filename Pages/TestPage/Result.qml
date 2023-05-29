@@ -241,6 +241,7 @@ Rectangle {
                 text: 'PRINT'
             }
             SecondaryButton{
+                fontSize: 18
                 text: 'Send to LIS'
             }
             SecondaryButton{
