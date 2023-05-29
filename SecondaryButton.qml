@@ -4,6 +4,8 @@ import QtQuick.Controls 2.15
 Button{
     id: control
 
+    property int fontSize: 22
+
     hoverEnabled: false
     width: 112 ; height: 44
     text: "Default"
@@ -27,7 +29,7 @@ Button{
         color: control.down ? 'white' : Constants.darkTextColor
         font{
             family: Constants.montserratNormal.name
-            pixelSize: 22
+            pixelSize: fontSize
         }
     }
 }
