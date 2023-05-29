@@ -5,6 +5,9 @@ import Qt5Compat.GraphicalEffects
 
 Button{
     id: control
+
+    property int fontSize: 22
+
     width: 112 ; height: 44
     hoverEnabled: false
     text: "SAVE"
@@ -32,7 +35,7 @@ Button{
         color: control.down ? Constants.primaryColor : "white"
         font{
             family: Constants.montserratNormal.name
-            pixelSize: 22
+            pixelSize: fontSize
         }
 
     }
