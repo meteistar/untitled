@@ -4,6 +4,7 @@ import QtQuick.Controls 2.15
 Button{
     id: control
 
+    hoverEnabled: false
     width: 112 ; height: 44
     text: "Default"
     background: Rectangle{
@@ -15,7 +16,7 @@ Button{
             anchors.centerIn: parent
             width: parent.width-4 ; height: parent.height-4
             radius: 8
-            gradient: Constants.bg
+            gradient: control.down ? Constants.blueGradient : Constants.bg
         }
     }
     contentItem: Text{
@@ -23,7 +24,7 @@ Button{
         anchors.fill: parent
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
-        color: Constants.darkTextColor
+        color: control.down ? 'white' : Constants.darkTextColor
         font{
             family: Constants.montserratNormal.name
             pixelSize: 22

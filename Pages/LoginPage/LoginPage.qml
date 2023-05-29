@@ -116,7 +116,9 @@ Rectangle {
     }
 
     SecondaryButton{
-//        text: 'ENGLISH'
+        id: languageButton
+
+        hoverEnabled: false
         width: 169 ; height: 45
 
         contentItem: Row{
@@ -135,7 +137,7 @@ Rectangle {
                     family: Constants.montserratNormal.name
                     pixelSize: 16
                 }
-                color: Constants.primaryColor
+                color: languageButton.down ? 'white' : Constants.primaryColor
                 verticalAlignment: Text.AlignVCenter
                 horizontalAlignment: Text.AlignHCenter
                 anchors.verticalCenter: parent.verticalCenter
