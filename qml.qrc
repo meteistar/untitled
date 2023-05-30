@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>SettingsPage.qml</file>
         <file>Pages/HomePage/HomePage.qml</file>
         <file>Pages/HomePage/SideBar.qml</file>
         <file>Assets/profile.png</file>

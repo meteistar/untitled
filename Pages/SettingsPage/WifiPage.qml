@@ -164,47 +164,60 @@ Rectangle {
         }
         color: Constants.darkTextColor
         width: 74 ; height: 25
-        x: 324 ; y: 533
+        x: 324 //; y: 533
+        anchors.verticalCenter: wifiToggleId.verticalCenter
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
     }
 
-    Rectangle{
-        x: 430 ; y: 526
-        width: 170 ; height: 37
-        border{
-            width: 3
-            color: Constants.primaryColor
-        }
-        color: 'transparent'
+    MToggleButton{
+       id: wifiToggleId
 
-        Rectangle{
-            width: 88 ; height: 37
-            color: Constants.primaryColor
-        }
+       x: 430 ; y: 526
+       firstText: 'ON'
+       secondText: 'OFF'
 
-        Text{
-            text: "ON"
-            width: 88 ; height: 37
-            font{
-                family: Constants.montserratNormal.name
-                pixelSize: 16
-            }
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-        }
-        Text{
-            text: "OFF"
-            width: 88 ; height: 37
-            x: 82
-            font{
-                family: Constants.montserratNormal.name
-                pixelSize: 16
-            }
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-        }
+       onFirstClicked: console.log("first clicked")
+       onSecondClicked: console.log("second clicked")
     }
+
+//    Rectangle{
+//        visible: false
+//        x: 430 ; y: 526
+//        width: 170 ; height: 37
+//        border{
+//            width: 3
+//            color: Constants.primaryColor
+//        }
+//        color: 'transparent'
+
+//        Rectangle{
+//            width: 88 ; height: 37
+//            color: Constants.primaryColor
+//        }
+
+//        Text{
+//            text: "ON"
+//            width: 88 ; height: 37
+//            font{
+//                family: Constants.montserratNormal.name
+//                pixelSize: 16
+//            }
+//            verticalAlignment: Text.AlignVCenter
+//            horizontalAlignment: Text.AlignHCenter
+//        }
+//        Text{
+//            text: "OFF"
+//            width: 88 ; height: 37
+//            x: 82
+//            font{
+//                family: Constants.montserratNormal.name
+//                pixelSize: 16
+//            }
+//            verticalAlignment: Text.AlignVCenter
+//            horizontalAlignment: Text.AlignHCenter
+//        }
+//    }
 
     Text{
         text: "Local IP: 192.168.1.103"

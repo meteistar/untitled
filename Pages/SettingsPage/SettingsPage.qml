@@ -9,7 +9,7 @@ import "../../"
 BasePage{
     id: root
 
-    buttonTitle: "Settings"
+    buttonTitle: "SETTINGS"
 
     StackLayout{
         id: settingsStackLayout

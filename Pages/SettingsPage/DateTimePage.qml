@@ -8,6 +8,13 @@ Rectangle {
 
     color: 'transparent'
 
+    property int year: 2023
+    property int month: 6
+    property int day: 30
+
+    property int hour: 6
+    property int minute: 40
+
     Row{
         x:281 ; y:155
         spacing: 13
@@ -62,6 +69,7 @@ Rectangle {
                 family: Constants.montserratNormal.name
                 pixelSize: 22
             }
+            onClicked: year += 1
         }
         SecondaryButton{
             width: 117 ; height: 50
@@ -70,6 +78,11 @@ Rectangle {
                 family: Constants.montserratNormal.name
                 pixelSize: 22
             }
+            onClicked: {
+                month += 1
+                if(month == 13)
+                    month = 1
+            }
         }
         SecondaryButton{
             width: 117 ; height: 50
@@ -78,10 +91,16 @@ Rectangle {
                 family: Constants.montserratNormal.name
                 pixelSize: 22
             }
+            onClicked: {
+                day += 1
+                if(day == 32)
+                    day = 1
+            }
         }
         Text{
+            id: yearLabel
             width: 117 ; height: 50
-            text: '2023'
+            text: root.year
             font{
                 family: Constants.montserratNormal.name
                 pixelSize: 22
@@ -90,8 +109,9 @@ Rectangle {
             horizontalAlignment: Text.AlignHCenter
         }
         Text{
+            id: monthLabel
             width: 117 ; height: 50
-            text: '4'
+            text: root.month
             font{
                 family: Constants.montserratNormal.name
                 pixelSize: 22
@@ -100,8 +120,9 @@ Rectangle {
             horizontalAlignment: Text.AlignHCenter
         }
         Text{
+            id: dayLabel
             width: 117 ; height: 50
-            text: '7'
+            text: root.day
             font{
                 family: Constants.montserratNormal.name
                 pixelSize: 22
@@ -116,6 +137,7 @@ Rectangle {
                 family: Constants.montserratNormal.name
                 pixelSize: 22
             }
+            onClicked: year -= 1
         }
         SecondaryButton{
             width: 117 ; height: 50
@@ -124,6 +146,12 @@ Rectangle {
                 family: Constants.montserratNormal.name
                 pixelSize: 22
             }
+            onClicked: {
+                if(month == 1)
+                    return
+                month -= 1
+
+            }
         }
         SecondaryButton{
             width: 117 ; height: 50
@@ -131,6 +159,11 @@ Rectangle {
             font{
                 family: Constants.montserratNormal.name
                 pixelSize: 22
+            }
+            onClicked: {
+                if(day == 1)
+                    return
+                day -= 1
             }
         }
 
@@ -179,6 +212,11 @@ Rectangle {
                 family: Constants.montserratNormal.name
                 pixelSize: 22
             }
+            onClicked: {
+                if(hour === 23)
+                    return
+                hour += 1
+            }
         }
         SecondaryButton{
             width: 117 ; height: 50
@@ -187,11 +225,16 @@ Rectangle {
                 family: Constants.montserratNormal.name
                 pixelSize: 22
             }
+            onClicked: {
+                if(minute === 59)
+                    return
+                minute += 1
+            }
         }
 
         Text{
             width: 117 ; height: 50
-            text: '15'
+            text: hour
             font{
                 family: Constants.montserratNormal.name
                 pixelSize: 22
@@ -201,7 +244,7 @@ Rectangle {
         }
         Text{
             width: 117 ; height: 50
-            text: '50'
+            text: minute
             font{
                 family: Constants.montserratNormal.name
                 pixelSize: 22
@@ -217,6 +260,11 @@ Rectangle {
                 family: Constants.montserratNormal.name
                 pixelSize: 22
             }
+            onClicked: {
+                if(hour === 1)
+                    return
+                hour -= 1
+            }
         }
         SecondaryButton{
             width: 117 ; height: 50
@@ -224,6 +272,11 @@ Rectangle {
             font{
                 family: Constants.montserratNormal.name
                 pixelSize: 22
+            }
+            onClicked: {
+                if(minute === 0)
+                    return
+                minute -= 1
             }
         }
 

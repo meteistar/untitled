@@ -6,7 +6,8 @@ import "../../"
 Button{
     id: root
 
-    width: pressedd ? 155 : 115 ; height: 48
+    hoverEnabled: false
+    width: root.pressedd ? 155 : 115 ; height: 48
     anchors.horizontalCenter: menuBarId.horizontalCenter
 
     text: "Default"
@@ -16,7 +17,7 @@ Button{
     background: Rectangle{
         anchors.fill: parent
         color: 'transparent'
-        gradient: pressedd ? Constants.blueGradient : undefined
+        gradient: root.pressedd ? Constants.blueGradient : undefined
         border{
             width: 2
             color: root.pressedd ? Constants.primaryColor : "#7B7B7B"

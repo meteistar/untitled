@@ -8,30 +8,13 @@ Rectangle {
     id: root
 
     width: 137 ; height: parent.height
-
     gradient: Constants.blueGradient
-
-//    Rectangle{
-//        anchors.centerIn: parent
-//        width: parent.width-8
-//        height: parent.height-8
-//        gradient: Constants.bg
-////        color: "transparent"
-//    }
 
     Rectangle{
         id: upperRect
 
         width: parent.width ; height: 225
         gradient: Constants.blueGradient
-
-//        Rectangle{
-//            anchors.centerIn: parent
-//            width: parent.width-8
-//            height: parent.height-8
-//            gradient: Constants.bg
-////            color: 'white'
-//        }
         Column{
             anchors.fill: parent
             Row{
@@ -162,6 +145,10 @@ Rectangle {
                 horizontalAlignment: Text.AlignHCenter
                 text: Qt.formatTime(new Date(),"hh:mm:ss")
                 color: 'white'
+                font{
+                    family: Constants.montserratNormal.name
+                    pointSize: 13
+                }
             }
             Timer {
                 id: timer
@@ -182,6 +169,10 @@ Rectangle {
                 horizontalAlignment: Text.AlignHCenter
                 text: Qt.formatDateTime(new Date(), "yyyy-MM-dd")
                 color: 'white'
+                font{
+                    family: Constants.montserratNormal.name
+                    pointSize: 13
+                }
             }
 
             Rectangle{
@@ -235,26 +226,6 @@ Rectangle {
                 }
             }
         }
-
-//        Image{
-//            source: "qrc:/Assets/temperature.png"
-//            anchors{
-//                left: parent.left
-//                leftMargin: 20
-//                top: parent.top
-//                topMargin: 14
-//            }
-//        }
-//        Text{
-//            id: temperature2Id
-//            text: "33 C"
-//            anchors{
-//                left: parent.left
-//                leftMargin: 60
-//                top: parent.top
-//                topMargin: 15
-//            }
-//        }
 
         Column{
 //            anchors.horizontalCenter: parent.horizontalCenter

@@ -15,62 +15,81 @@ BasePage {
         x:158 ; y:71
         width: 790 ; height: 384
         color: Constants.cardBackgroundColor
-        Rectangle{
-            id: horLine
-            width: parent.width ; height: 1
-            color: Constants.darkTextColor
-            y:30
-        }
-    }
+//        Rectangle{
+//            id: horLine
+//            width: parent.width ; height: 1
+//            color: Constants.darkTextColor
+//            y:30
+//        }
+        Row{
+            width: 790
+            height: 47
+            Rectangle{
+                width: 41
+                height: parent.height
+                color: 'gray'//'transparent'
+//                border{
+//                    width: 1
+//                    color: 'black'
+//                }
+            }
+            Rectangle{
+                width: 123
+                height: parent.height
+                color: 'transparent'
+                border{
+                    width: 1
+                    color: 'gray'
+                }
+                Text{
+                    anchors.centerIn: parent
+                    text: 'Date & Time'
+                    color: 'black'//Constants.outlineColor
+                    font{
+                        family: Constants.montserratNormal.name
+                        pointSize: 14
+                    }
+                }
+            }
+            Rectangle{
+                width: 124
+                height: parent.height
+                color: 'transparent'
+                border{
+                    width: 1
+                    color: 'gray'
+                }
+                Text{
+                    anchors.centerIn: parent
+                    text: 'Sample No'
+                    color: Constants.outlineColor
+                    font{
+                        family: Constants.montserratNormal.name
+                        pointSize: 14
+                    }
+                }
+            }
+            Rectangle{
+                width: 124
+                height: parent.height
+                color: 'transparent'
+                border{
+                    width: 1
+                    color: 'gray'
+                }
+                Text{
+                    anchors.centerIn: parent
+                    text: 'Patient No'
+                    color: Constants.outlineColor
+                    font{
+                        family: Constants.montserratNormal.name
+                        pointSize: 14
+                    }
+                }
+            }
 
-    Text{
-        text: "Date & Time"
-        color: Constants.darkTextColor
 
-        anchors {
-            left: parent.left
-            leftMargin: 199
-            top: parent.top
-            topMargin: 71
-        }
 
-        font {
-            family: Constants.montserratNormal.name
-            pixelSize: Constants.h5
-        }
-    }
-
-    Text {
-        id: orderId
-        text: "Sample No"
-        color: Constants.darkTextColor
-        anchors {
-            left: parent.left
-            leftMargin: 323
-            top: parent.top
-            topMargin: 71
-        }
-
-        font {
-            family: Constants.montserratNormal.name
-            pixelSize: Constants.h5
-        }
-    }
-
-    Text {
-        id: expiderId
-        text: "Patient No"
-        color: Constants.darkTextColor
-        anchors {
-            left: parent.left
-            leftMargin: 446
-            top: parent.top
-            topMargin: 71
-        }
-
-        font {
-            family: Constants.montserratNormal.name
-            pixelSize: Constants.h5
         }
     }
 
@@ -242,11 +261,12 @@ BasePage {
         }
     }
 
-    SButton{
+    SecondaryButton{
         id: infoId
-        text: "Info"
+        text: 'Info'
         x: 203 ; y: 464
     }
+
     Image{
         source: "qrc:/Assets/arrow.png"
         x:418 ; y:476
@@ -272,12 +292,13 @@ BasePage {
             onClicked: console.log("Down Arrow clicked")
         }
     }
-    SButton{
-        text: "2"
+    SecondaryButton{
+        text: '2'
         x:596 ; y:466
         width: 64 ; height: 44
     }
-    SButton{
+
+    SecondaryButton{
         text: "Go"
         x:696 ; y:466
         width: 64 ; height: 44
@@ -286,11 +307,11 @@ BasePage {
         spacing: 14
         width: 637 ; height: 51
         x: 204 ; y: 523
-        SButton{ text: "Search" }
-        SButton{ text: "Delete" }
-        SButton{ text: "Print"  }
-        SButton{ text: "Send"   }
-        SButton{ text: "Export" }
+        SecondaryButton{ text: "Search" }
+        SecondaryButton{ text: "Delete" }
+        SecondaryButton{ text: "Print"  }
+        SecondaryButton{ text: "Send"   }
+        SecondaryButton{ text: "Export" }
     }
 
 }

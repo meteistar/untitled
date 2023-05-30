@@ -16,16 +16,13 @@ BasePage{
 
         width: 213 ; height: parent.height
         gradient: Constants.blueGradient
-//        border.color: "#A9AC00"
-//        border.width: 4
 
         Rectangle{
             id: upperRect
 
             width: parent.width ; height: 143
             gradient: Constants.blueGradient
-//            border.color: "#A9AC00"
-//            border.width: 4
+
             Column{
                 anchors.fill: parent
                 Row{
@@ -174,8 +171,6 @@ BasePage{
             anchors.bottom: parent.bottom
             anchors.left: parent.left
             gradient: Constants.blueGradient
-//            border.color: "#A9AC00"
-//            border.width: 4
 
             Column{
                 anchors.centerIn: parent
@@ -189,31 +184,31 @@ BasePage{
                 IncubatorSlot{
                     y: 290
                     anchors.horizontalCenter: parent.horizontalCenter
-                    leftSquareColor: 'pink'
+                    leftSquareColor: '#A9AC00'
                     number: 1
                 }
                 IncubatorSlot{
                     y: 290
                     anchors.horizontalCenter: parent.horizontalCenter
-                    leftSquareColor: 'red'
+                    leftSquareColor: '#A9AC00'
                     number: 2
                 }
                 IncubatorSlot{
                     y: 290
                     anchors.horizontalCenter: parent.horizontalCenter
-                    leftSquareColor: 'blue'
+                    leftSquareColor: '#DCFF06'
                     number: 3
                 }
                 IncubatorSlot{
                     y: 290
                     anchors.horizontalCenter: parent.horizontalCenter
-                    leftSquareColor: 'green'
+                    leftSquareColor: '#00AFFA'
                     number: 4
                 }
                 IncubatorSlot{
                     y: 290
                     anchors.horizontalCenter: parent.horizontalCenter
-                    leftSquareColor: 'yellow'
+                    leftSquareColor: '#F9FC73'
                     number: 5
                 }
             }
@@ -226,11 +221,6 @@ BasePage{
         text: root.buttonTitle
         anchors.left: sidebar.right
     }
-
-//    MButton{
-//        text: root.buttonTitle
-//        anchors.left: sidebar.right
-//    }
 
     StackLayout{
         id: testStackLayout

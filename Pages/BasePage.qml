@@ -19,6 +19,7 @@ Rectangle {
 //    }
 
     PrimaryButton{
+        enabled: false
         width: 274; height: 54
         text: root.buttonTitle
         anchors.left: sideBar.right

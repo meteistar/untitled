@@ -191,7 +191,8 @@ Rectangle {
     }
     ////
     Text{
-        x: 707 ; y: 304
+        x: 707 //; y: 304
+        anchors.verticalCenter: lisToggleId.verticalCenter
         text: 'LIS :'
         font{
             family: Constants.montserratNormal.name
@@ -203,48 +204,59 @@ Rectangle {
         horizontalAlignment: Text.AlignHCenter
     }
 
-    Rectangle{
-        x: 785 ; y: 304
-        width: 170 ; height: 37
-        border{
-            width: 3
-            color: Constants.primaryColor
-        }
-        color: 'transparent'
+    MToggleButton{
+       id: lisToggleId
 
-        Rectangle{
-            width: 88 ; height: 37
-            color: Constants.primaryColor
-        }
+       x: 785 ; y: 304
+       firstText: 'ON'
+       secondText: 'OFF'
 
-        Text{
-            text: "ON"
-            width: 88 ; height: 37
-            font{
-                family: Constants.montserratNormal.name
-                pixelSize: 16
-            }
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-        }
-        Text{
-            text: "OFF"
-            width: 88 ; height: 37
-            x: 82
-            font{
-                family: Constants.montserratNormal.name
-                pixelSize: 16
-            }
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-        }
+       onFirstClicked: console.log("first clicked")
+       onSecondClicked: console.log("second clicked")
     }
+
+//    Rectangle{
+//        x: 785 ; y: 304
+//        width: 170 ; height: 37
+//        border{
+//            width: 3
+//            color: Constants.primaryColor
+//        }
+//        color: 'transparent'
+
+//        Rectangle{
+//            width: 88 ; height: 37
+//            color: Constants.primaryColor
+//        }
+
+//        Text{
+//            text: "ON"
+//            width: 88 ; height: 37
+//            font{
+//                family: Constants.montserratNormal.name
+//                pixelSize: 16
+//            }
+//            verticalAlignment: Text.AlignVCenter
+//            horizontalAlignment: Text.AlignHCenter
+//        }
+//        Text{
+//            text: "OFF"
+//            width: 88 ; height: 37
+//            x: 82
+//            font{
+//                family: Constants.montserratNormal.name
+//                pixelSize: 16
+//            }
+//            verticalAlignment: Text.AlignVCenter
+//            horizontalAlignment: Text.AlignHCenter
+//        }
+//    }
 
     Button{
         id: testConnButtonId
         width: 250 ; height: 44
         x:708 ; y:370
-
+        hoverEnabled: false
         text: "TEST CONNECTION"
         background: Rectangle{
             anchors.fill: parent
@@ -260,6 +272,7 @@ Rectangle {
                     GradientStop{position: 0.0 ;color: "#DFE6EE"}
                     GradientStop{position: 1.0 ;color: "#CAD8DB"}
                 }
+                visible: testConnButtonId.down ? false : true
             }
         }
         contentItem: Text{
@@ -267,7 +280,7 @@ Rectangle {
             anchors.fill: parent
             verticalAlignment: Text.AlignVCenter
             horizontalAlignment: Text.AlignHCenter
-            color: Constants.darkTextColor
+            color: testConnButtonId.down ? 'white' : Constants.darkTextColor
             font{
                 family: Constants.montserratNormal.name
                 pixelSize: 22
