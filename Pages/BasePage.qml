@@ -36,6 +36,7 @@ Rectangle {
         width: 274; height: 54
         text: "HOME"
         anchors.right: parent.right
+        z: 10
         onClicked: {
             stackLayout.currentIndex = 1
         }

@@ -13,38 +13,26 @@ BasePage {
         id: tableFrameId
 
         x:158 ; y:71
-        width: 790 ; height: 384
+        width: headerId.width ; height: 384
         color: Constants.cardBackgroundColor
-//        Rectangle{
-//            id: horLine
-//            width: parent.width ; height: 1
-//            color: Constants.darkTextColor
-//            y:30
-//        }
+
         Row{
-            width: 790
+            id: headerId
+            //width: 785
             height: 47
             Rectangle{
                 width: 41
                 height: parent.height
-                color: 'gray'//'transparent'
-//                border{
-//                    width: 1
-//                    color: 'black'
-//                }
+                gradient: Constants.blueGradient
             }
             Rectangle{
                 width: 123
                 height: parent.height
-                color: 'transparent'
-                border{
-                    width: 1
-                    color: 'gray'
-                }
+                gradient: Constants.blueGradient
                 Text{
                     anchors.centerIn: parent
                     text: 'Date & Time'
-                    color: 'black'//Constants.outlineColor
+                    color: 'white'
                     font{
                         family: Constants.montserratNormal.name
                         pointSize: 14
@@ -52,17 +40,13 @@ BasePage {
                 }
             }
             Rectangle{
-                width: 124
+                width: 123
                 height: parent.height
-                color: 'transparent'
-                border{
-                    width: 1
-                    color: 'gray'
-                }
+                gradient: Constants.blueGradient
                 Text{
                     anchors.centerIn: parent
                     text: 'Sample No'
-                    color: Constants.outlineColor
+                    color: 'white'
                     font{
                         family: Constants.montserratNormal.name
                         pointSize: 14
@@ -70,17 +54,55 @@ BasePage {
                 }
             }
             Rectangle{
-                width: 124
+                width: 123
                 height: parent.height
-                color: 'transparent'
-                border{
-                    width: 1
-                    color: 'gray'
-                }
+                gradient: Constants.blueGradient
                 Text{
                     anchors.centerIn: parent
                     text: 'Patient No'
-                    color: Constants.outlineColor
+                    color: 'white'
+                    font{
+                        family: Constants.montserratNormal.name
+                        pointSize: 14
+                    }
+                }
+            }
+            Rectangle{
+                width: 123
+                height: parent.height
+                gradient: Constants.blueGradient
+                Text{
+                    anchors.centerIn: parent
+                    text: 'Item'
+                    color: 'white'
+                    font{
+                        family: Constants.montserratNormal.name
+                        pointSize: 14
+                    }
+                }
+            }
+            Rectangle{
+                width: 123
+                height: parent.height
+                gradient: Constants.blueGradient
+                Text{
+                    anchors.centerIn: parent
+                    text: 'Name'
+                    color: 'white'
+                    font{
+                        family: Constants.montserratNormal.name
+                        pointSize: 14
+                    }
+                }
+            }
+            Rectangle{
+                width: 123
+                height: parent.height
+                gradient: Constants.blueGradient
+                Text{
+                    anchors.centerIn: parent
+                    text: 'Result'
+                    color: 'white'
                     font{
                         family: Constants.montserratNormal.name
                         pointSize: 14
@@ -88,61 +110,8 @@ BasePage {
                 }
             }
 
-
-
         }
     }
-
-    Text {
-        id: statusId
-        text: "Item"
-        color: Constants.darkTextColor
-        anchors {
-            left: parent.left
-            leftMargin: 571
-            top: parent.top
-            topMargin: 71
-        }
-
-        font {
-            family: Constants.montserratNormal.name
-            pixelSize: Constants.h5
-        }
-    }
-    Text {
-        id: certId
-        text: "Name"
-        color: Constants.darkTextColor
-        anchors {
-            left: parent.left
-            leftMargin: 695
-            top: parent.top
-            topMargin: 71
-        }
-
-        font {
-            family: Constants.montserratNormal.name
-            pixelSize: Constants.h5
-        }
-    }
-    Text {
-        id: resultId
-        text: "Result"
-        color: Constants.darkTextColor
-        anchors {
-            left: parent.left
-            leftMargin: 817
-            top: parent.top
-            topMargin: 71
-        }
-
-        font {
-            family: Constants.montserratNormal.name
-            pixelSize: Constants.h5
-        }
-    }
-
-
 
     ListView{
         id: searchList
@@ -160,83 +129,139 @@ BasePage {
             width: parent.width
             anchors.left: parent.left
             height: 47
-            spacing: 50
-            Text{
-                id: orderLabelId
-                anchors.verticalCenter: parent.verticalCenter
-//                anchors.left: parent.left
-//                anchors.leftMargin: 41
-                text: dateAndTime
-                font{
-                    family: Constants.montserratNormal.name
-                    pixelSize: Constants.h5
+            Rectangle{
+                width: 41
+                height: parent.height
+                color: 'transparent'
+                border{
+                    width: 1
+                    color: Constants.outlineColor
                 }
-                color: Constants.text2Color
             }
-            Text{
-                id: expiderOnLabelId
-                anchors.verticalCenter: parent.verticalCenter
-//                anchors.left: orderLabelId.right
-//                anchors.leftMargin: 164
-                text: sampleNo
-                font{
-                    family: Constants.montserratNormal.name
-                    pixelSize: Constants.h5
+            Rectangle{
+                width: 123
+                height: parent.height
+                color: 'transparent'
+                border{
+                    width: 1
+                    color: Constants.outlineColor
                 }
-                color: Constants.text2Color
-            }
-            Text{
-                id: statusLabelId
-                anchors.verticalCenter: parent.verticalCenter
-//                anchors.left: expiderOnLabelId.right
-//                anchors.leftMargin: 50
-                text: patientNo
-                font{
-                    family: Constants.montserratNormal.name
-                    pixelSize: 13
+                Text{
+                    id: orderLabelId
+                    anchors.centerIn: parent
+                    text: dateAndTime
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: Constants.h5
+                    }
+                    color: Constants.text2Color
                 }
-                color: Constants.text2Color
             }
 
-            Text{
-                id: certCreatedOnLabelId
-                anchors.verticalCenter: parent.verticalCenter
-//                anchors.left: statusRectId.right
-//                anchors.leftMargin: 45
-                text: mItem
-                horizontalAlignment: Text.AlignLeft
-                font{
-                    family: Constants.montserratNormal.name
-                    pixelSize: Constants.h5
+            Rectangle{
+                width: 123
+                height: parent.height
+                color: 'transparent'
+                border{
+                    width: 1
+                    color: Constants.outlineColor
                 }
-                color: Constants.text2Color
-            }
-            Text{
-                id: certExpiredOnLabelId
-                anchors.verticalCenter: parent.verticalCenter
-//                anchors.left: certCreatedOnLabelId.right
-//                anchors.leftMargin: 83
-                text: name
-                horizontalAlignment: Text.AlignLeft
-                font{
-                    family: Constants.montserratNormal.name
-                    pixelSize: Constants.h5
+                Text{
+                    id: expiderOnLabelId
+                    anchors.centerIn: parent
+                    text: sampleNo
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: Constants.h5
+                    }
+                    color: Constants.text2Color
                 }
-                color: Constants.text2Color
             }
-            Text{
-                id: certUrlLabelId
-                anchors.verticalCenter: parent.verticalCenter
-//                anchors.left: certExpiredOnLabelId.right
-//                anchors.leftMargin: 80
-                text: result
-                horizontalAlignment: Text.AlignLeft
-                font{
-                    family: Constants.montserratNormal.name
-                    pixelSize: Constants.h5
+            Rectangle{
+                width: 123
+                height: parent.height
+                color: 'transparent'
+                border{
+                    width: 1
+                    color: Constants.outlineColor
                 }
-                color: Constants.text2Color
+                Text{
+                    id: statusLabelId
+                    anchors.centerIn: parent
+                    text: patientNo
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: 13
+                    }
+                    color: Constants.text2Color
+                }
             }
+
+            Rectangle{
+                width: 123
+                height: parent.height
+                color: 'transparent'
+                border{
+                    width: 1
+                    color: Constants.outlineColor
+                }
+                Text{
+                    id: certCreatedOnLabelId
+                    anchors.centerIn: parent
+                    text: mItem
+                    horizontalAlignment: Text.AlignLeft
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: Constants.h5
+                    }
+                    color: Constants.text2Color
+                }
+            }
+
+            Rectangle{
+                width: 123
+                height: parent.height
+                color: 'transparent'
+                border{
+                    width: 1
+                    color: Constants.outlineColor
+                }
+
+                Text{
+                    id: certExpiredOnLabelId
+                    anchors.centerIn: parent
+                    text: name
+                    horizontalAlignment: Text.AlignLeft
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: Constants.h5
+                    }
+                    color: Constants.text2Color
+                }
+            }
+
+            Rectangle{
+                width: 123
+                height: parent.height
+                color: 'transparent'
+                border{
+                    width: 1
+                    color: Constants.outlineColor
+                }
+                Text{
+                    id: certUrlLabelId
+                    anchors.centerIn: parent
+                    text: result
+                    horizontalAlignment: Text.AlignLeft
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: Constants.h5
+                    }
+                    color: Constants.text2Color
+                }
+            }
+
+
         }
 
     }
@@ -244,20 +269,84 @@ BasePage {
         id: searchModelId
 
         ListElement {
-            dateAndTime: "A0B1C007" ;
-            sampleNo: "2023-05-13" ;
-            patientNo: "Valid" ;
-            mItem: "2023-05-11" ;
-            name: "2023-06-07" ;
-            result: "http://www.faxquote.com" ;
+            dateAndTime: "2023-12-06" ;
+            sampleNo: "1" ;
+            patientNo: "12345" ;
+            mItem: "abc" ;
+            name: "xyz" ;
+            result: "Valid" ;
         }
         ListElement {
-            dateAndTime: "A0B1C008" ;
-            sampleNo: "2023-05-14" ;
-            patientNo: "Valid" ;
-            mItem: "2023-05-12" ;
-            name: "2023-06-06" ;
-            result: "http://www.faxquote.com" ;
+            dateAndTime: "2023-12-07" ;
+            sampleNo: "2" ;
+            patientNo: "12345" ;
+            mItem: "abc" ;
+            name: "xyz" ;
+            result: "Valid" ;
+        }
+        ListElement {
+            dateAndTime: "2023-12-06" ;
+            sampleNo: "3" ;
+            patientNo: "12345" ;
+            mItem: "abc" ;
+            name: "xyz" ;
+            result: "Valid" ;
+        }
+        ListElement {
+            dateAndTime: "2023-12-07" ;
+            sampleNo: "4" ;
+            patientNo: "12345" ;
+            mItem: "abc" ;
+            name: "xyz" ;
+            result: "Valid" ;
+        }
+        ListElement {
+            dateAndTime: "2023-12-06" ;
+            sampleNo: "5" ;
+            patientNo: "12345" ;
+            mItem: "abc" ;
+            name: "xyz" ;
+            result: "Valid" ;
+        }
+        ListElement {
+            dateAndTime: "2023-12-07" ;
+            sampleNo: "6" ;
+            patientNo: "12345" ;
+            mItem: "abc" ;
+            name: "xyz" ;
+            result: "Valid" ;
+        }
+        ListElement {
+            dateAndTime: "2023-12-06" ;
+            sampleNo: "7" ;
+            patientNo: "12345" ;
+            mItem: "abc" ;
+            name: "xyz" ;
+            result: "Valid" ;
+        }
+        ListElement {
+            dateAndTime: "2023-12-07" ;
+            sampleNo: "8" ;
+            patientNo: "12345" ;
+            mItem: "abc" ;
+            name: "xyz" ;
+            result: "Valid" ;
+        }
+        ListElement {
+            dateAndTime: "2023-12-06" ;
+            sampleNo: "9" ;
+            patientNo: "12345" ;
+            mItem: "abc" ;
+            name: "xyz" ;
+            result: "Valid" ;
+        }
+        ListElement {
+            dateAndTime: "2023-12-07" ;
+            sampleNo: "10" ;
+            patientNo: "12345" ;
+            mItem: "abc" ;
+            name: "xyz" ;
+            result: "Valid" ;
         }
     }
 
@@ -272,7 +361,11 @@ BasePage {
         x:418 ; y:476
         MouseArea{
             anchors.fill: parent
-            onClicked: console.log("Up Arrow clicked")
+            onClicked: {
+                console.log("Up Arrow clicked")
+                searchList.positionViewAtBeginning()
+                searchList.positionViewAtIndex(0, ListView.Beginning)
+            }
         }
     }
     Text{
@@ -289,7 +382,10 @@ BasePage {
         x:527 ; y:476
         MouseArea{
             anchors.fill: parent
-            onClicked: console.log("Down Arrow clicked")
+            onClicked: {
+                console.log("Down Arrow clicked")
+                searchList.positionViewAtIndex(5, ListView.Beginning)
+            }
         }
     }
     SecondaryButton{

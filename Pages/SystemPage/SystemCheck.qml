@@ -36,11 +36,7 @@ Rectangle {
         Row{
             Rectangle{
                 width: 285 ; height: 48
-                color: 'gray'
-                border{
-                    width: 1
-                    color: "blue"
-                }
+                gradient: Constants.blueGradient
                 Text{
                     anchors.centerIn: parent
                     text: "Name"
@@ -53,11 +49,7 @@ Rectangle {
             }
             Rectangle{
                 width: 285 ; height: 48
-                color: 'gray'
-                border{
-                    width: 1
-                    color: "blue"
-                }
+                gradient: Constants.blueGradient
                 Text{
                     anchors.centerIn: parent
                     text: "Result"

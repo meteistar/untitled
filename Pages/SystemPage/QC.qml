@@ -71,6 +71,8 @@ Rectangle {
                         family: Constants.montserratNormal.name
                         pixelSize: 16
                     }
+                    verticalAlignment: Text.AlignVCenter
+                    anchors.verticalCenter: parent.verticalCenter
                 }
                 TextInput{
                     text: '0'
@@ -83,6 +85,8 @@ Rectangle {
                             root.y = -310
                         }
                     }
+                    verticalAlignment: Text.AlignVCenter
+                    anchors.verticalCenter: parent.verticalCenter
                 }
             }
             Row{
@@ -96,6 +100,8 @@ Rectangle {
                         family: Constants.montserratNormal.name
                         pixelSize: 16
                     }
+                    verticalAlignment: Text.AlignVCenter
+                    anchors.verticalCenter: parent.verticalCenter
                 }
                 TextInput{
                     text: '6000'
@@ -108,6 +114,8 @@ Rectangle {
                             root.y = -310
                         }
                     }
+                    verticalAlignment: Text.AlignVCenter
+                    anchors.verticalCenter: parent.verticalCenter
                 }
             }
             Row{
@@ -120,6 +128,8 @@ Rectangle {
                         family: Constants.montserratNormal.name
                         pixelSize: 16
                     }
+                    verticalAlignment: Text.AlignVCenter
+                    anchors.verticalCenter: parent.verticalCenter
                 }
                 TextInput{
                     text: '310'
@@ -132,6 +142,8 @@ Rectangle {
                             root.y = -310
                         }
                     }
+                    verticalAlignment: Text.AlignVCenter
+                    anchors.verticalCenter: parent.verticalCenter
                 }
             }
 
@@ -157,6 +169,7 @@ Rectangle {
                     pixelSize: 16
                 }
                 verticalAlignment: Text.AlignVCenter
+                anchors.verticalCenter: parent.verticalCenter
             }
             TextInput{
                 text: 'data'
@@ -169,6 +182,8 @@ Rectangle {
                         root.y = -310
                     }
                 }
+                verticalAlignment: Text.AlignVCenter
+                anchors.verticalCenter: parent.verticalCenter
             }
         }
 

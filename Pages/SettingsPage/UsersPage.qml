@@ -9,17 +9,20 @@ Rectangle {
     color: 'transparent'
 
     Rectangle{
-        width: 412 ; height: 328
+        id: userListFrameId
+
+        width: 720 ; height: 335+43
         color: Constants.cardBackgroundColor
-        x:323 ; y:123
+        x:270 ; y:85
 
         Row{
             Rectangle{
                 width: 82 ; height: 43
+                gradient: Constants.blueGradient
                 Text{
                     anchors.centerIn: parent
                     text: "Select"
-                    color: Constants.darkTextColor
+                    color: 'white'//Constants.darkTextColor
                     font{
                         family: Constants.montserratNormal.name
                         pixelSize: 13
@@ -29,11 +32,12 @@ Rectangle {
                 }
             }
             Rectangle{
-                width: 163 ; height: 43
+                width: 319 ; height: 43
+                gradient: Constants.blueGradient
                 Text{
                     anchors.centerIn: parent
                     text: "User Name"
-                    color: Constants.darkTextColor
+                    color: 'white'//Constants.darkTextColor
                     font{
                         family: Constants.montserratNormal.name
                         pixelSize: 13
@@ -43,11 +47,12 @@ Rectangle {
                 }
             }
             Rectangle{
-                width: 163 ; height: 43
+                width: 319 ; height: 43
+                gradient: Constants.blueGradient
                 Text{
                     anchors.centerIn: parent
                     text: "Password"
-                    color: Constants.darkTextColor
+                    color: 'white'//Constants.darkTextColor
                     font{
                         family: Constants.montserratNormal.name
                         pixelSize: 13
@@ -63,7 +68,7 @@ Rectangle {
             id: userListId
 
             y:43
-            width: parent.width ; height: 286
+            width: parent.width ; height: 335
             delegate: userDelegate
             model: userModel
         }
@@ -83,7 +88,7 @@ Rectangle {
                     }
                 }
                 Rectangle{
-                    width: 163 ; height: 43
+                    width: 319 ; height: 43
                     color: 'transparent'
                     border{
                         width: 1
@@ -100,7 +105,7 @@ Rectangle {
                     }
                 }
                 Rectangle{
-                    width: 164 ; height: 43
+                    width: 319 ; height: 43
                     color: 'transparent'
                     border{
                         width: 1
@@ -134,8 +139,9 @@ Rectangle {
         }
     }
     Row{
-        x: 344; y:509
-        spacing: 70
+        anchors.horizontalCenter: userListFrameId.horizontalCenter
+        y:509
+        spacing: 25
         SecondaryButton{
             text: "ADD"
         }

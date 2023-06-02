@@ -12,61 +12,6 @@ Rectangle {
         width: 720 ; height: 384
         color: Constants.cardBackgroundColor
         x: 272 ; y: 117
-
-        Row{
-            Rectangle{
-                width: 240 ; height: 47
-                color: 'transparent'
-                border{
-                    width: 1
-                    color: "gray"
-                }
-                Text{
-                    anchors.centerIn: parent
-                    text: "Signal Strength"
-                    color: Constants.darkTextColor
-                    font{
-                        family: Constants.montserratNormal.name
-                        pixelSize: 18
-                    }
-                }
-            }
-            Rectangle{
-                width: 240 ; height: 47
-                color: 'transparent'
-                border{
-                    width: 1
-                    color: "gray"
-                }
-                Text{
-                    anchors.centerIn: parent
-                    text: "Network Name"
-                    color: Constants.darkTextColor
-                    font{
-                        family: Constants.montserratNormal.name
-                        pixelSize: 18
-                    }
-                }
-            }
-            Rectangle{
-                width: 240 ; height: 47
-                color: 'transparent'
-                border{
-                    width: 1
-                    color: "gray"
-                }
-                Text{
-                    anchors.centerIn: parent
-                    text: "Status"
-                    color: Constants.darkTextColor
-                    font{
-                        family: Constants.montserratNormal.name
-                        pixelSize: 18
-                    }
-                }
-            }
-        }
-
         ListView{
             id: wifiListId
 
@@ -130,6 +75,49 @@ Rectangle {
                 }
             }
         }
+
+        Row{
+            Rectangle{
+                width: 240 ; height: 47
+                gradient: Constants.blueGradient
+                Text{
+                    anchors.centerIn: parent
+                    text: "Signal Strength"
+                    color: 'white'
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: 18
+                    }
+                }
+            }
+            Rectangle{
+                width: 240 ; height: 47
+                gradient: Constants.blueGradient
+                Text{
+                    anchors.centerIn: parent
+                    text: "Network Name"
+                    color: 'white'
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: 18
+                    }
+                }
+            }
+            Rectangle{
+                width: 240 ; height: 47
+                gradient: Constants.blueGradient
+                Text{
+                    anchors.centerIn: parent
+                    text: "Status"
+                    color: 'white'
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: 18
+                    }
+                }
+            }
+        }
+
         ListModel{
             id: wifiModel
 
@@ -180,44 +168,6 @@ Rectangle {
        onFirstClicked: console.log("first clicked")
        onSecondClicked: console.log("second clicked")
     }
-
-//    Rectangle{
-//        visible: false
-//        x: 430 ; y: 526
-//        width: 170 ; height: 37
-//        border{
-//            width: 3
-//            color: Constants.primaryColor
-//        }
-//        color: 'transparent'
-
-//        Rectangle{
-//            width: 88 ; height: 37
-//            color: Constants.primaryColor
-//        }
-
-//        Text{
-//            text: "ON"
-//            width: 88 ; height: 37
-//            font{
-//                family: Constants.montserratNormal.name
-//                pixelSize: 16
-//            }
-//            verticalAlignment: Text.AlignVCenter
-//            horizontalAlignment: Text.AlignHCenter
-//        }
-//        Text{
-//            text: "OFF"
-//            width: 88 ; height: 37
-//            x: 82
-//            font{
-//                family: Constants.montserratNormal.name
-//                pixelSize: 16
-//            }
-//            verticalAlignment: Text.AlignVCenter
-//            horizontalAlignment: Text.AlignHCenter
-//        }
-//    }
 
     Text{
         text: "Local IP: 192.168.1.103"

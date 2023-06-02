@@ -12,6 +12,10 @@ BasePage {
 
     buttonTitle: "SYSTEM"
 
+    Component.onCompleted: {
+        systemCheckId.pressedd = true
+    }
+
     StackLayout{
         id: systemStackLayout
         anchors.fill: parent
@@ -36,71 +40,71 @@ BasePage {
     }
 
     MenuButton{
-        id: wifiButtonId
+        id: systemCheckId
         text: "System Check"
         height: 87
         y: 85
         onClicked: {
-            lisButtonId.pressedd = false
-            tempButtonId.pressedd = false
-            reagentButtonId.pressedd = false
-            dateTimeButtonId.pressedd = false
+            reagentId.pressedd = false
+            serviceId.pressedd = false
+            adjustmentId.pressedd = false
+            qcId.pressedd = false
 
             systemStackLayout.currentIndex = 0
         }
     }
     MenuButton{
-        id: lisButtonId
+        id: reagentId
         text: "Reagent"
         height: 87
         y: 188
         onClicked: {
-            wifiButtonId.pressedd = false
-            tempButtonId.pressedd = false
-            reagentButtonId.pressedd = false
-            dateTimeButtonId.pressedd = false
+            systemCheckId.pressedd = false
+            serviceId.pressedd = false
+            adjustmentId.pressedd = false
+            qcId.pressedd = false
 
             systemStackLayout.currentIndex = 1
         }
     }
     MenuButton{
-        id: tempButtonId
+        id: serviceId
         text: "Service"
         height: 87
         y: 292
         onClicked: {
-            wifiButtonId.pressedd = false
-            lisButtonId.pressedd = false
-            reagentButtonId.pressedd = false
-            dateTimeButtonId.pressedd = false
+            systemCheckId.pressedd = false
+            reagentId.pressedd = false
+            adjustmentId.pressedd = false
+            qcId.pressedd = false
 
             systemStackLayout.currentIndex = 2
         }
     }
     MenuButton{
-        id: reagentButtonId
+        id: adjustmentId
         text: "Adjustment"
         height: 87
         y: 395
         onClicked: {
-            wifiButtonId.pressedd = false
-            lisButtonId.pressedd = false
-            tempButtonId.pressedd = false
-            dateTimeButtonId.pressedd = false
+            systemCheckId.pressedd = false
+            reagentId.pressedd = false
+            serviceId.pressedd = false
+            qcId.pressedd = false
 
             systemStackLayout.currentIndex = 3
         }
     }
     MenuButton{
-        id: dateTimeButtonId
+        id: qcId
         text: "QC"
         height: 87
         y: 498
         onClicked: {
-            wifiButtonId.pressedd = false
-            lisButtonId.pressedd = false
-            tempButtonId.pressedd = false
-            reagentButtonId.pressedd = false
+            systemCheckId.pressedd = false
+            reagentId.pressedd = false
+            serviceId.pressedd = false
+            adjustmentId.pressedd = false
 
             systemStackLayout.currentIndex = 4
         }

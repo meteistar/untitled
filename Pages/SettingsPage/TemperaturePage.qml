@@ -8,6 +8,14 @@ Rectangle {
 
     color: 'transparent'
 
+    MouseArea{
+        anchors.fill: parent
+        onClicked: {
+            focus = true
+            root.y = 0
+        }
+    }
+
     Text{
         x: 496 ; y: 57
         text: "Unit"
@@ -70,6 +78,10 @@ Rectangle {
         TextField{
             x: 188 ; y:137
             width: 48
+            onFocusChanged: {
+                if(focus)
+                    root.y = -200
+            }
         }
         Text{
             text: 'C'
@@ -118,6 +130,10 @@ Rectangle {
         TextField{
             x: 188 ; y:137
             width: 48
+            onFocusChanged: {
+                if(focus)
+                    root.y = -200
+            }
         }
         Text{
             text: 'C'

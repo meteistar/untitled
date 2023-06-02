@@ -11,76 +11,6 @@ Rectangle {
         width: 720 ; height: 384
         color: Constants.cardBackgroundColor
         x: 262 ; y: 82
-        Row{
-        Rectangle{
-            width: 180 ; height: 44
-            color: 'transparent'
-            border{
-                width: 1
-                color: "gray"
-            }
-            Text{
-                anchors.centerIn: parent
-                text: "Item"
-                color: Constants.darkTextColor
-                font{
-                    family: Constants.montserratNormal.name
-                    pixelSize: 17
-                }
-            }
-        }
-        Rectangle{
-            width: 180 ; height: 44
-            color: 'transparent'
-            border{
-                width: 1
-                color: "gray"
-            }
-            Text{
-                anchors.centerIn: parent
-                text: "Item No"
-                color: Constants.darkTextColor
-                font{
-                    family: Constants.montserratNormal.name
-                    pixelSize: 17
-                }
-            }
-        }
-        Rectangle{
-            width: 180 ; height: 44
-            color: 'transparent'
-            border{
-                width: 1
-                color: "gray"
-            }
-            Text{
-                anchors.centerIn: parent
-                text: "Reference Range"
-                color: Constants.darkTextColor
-                font{
-                    family: Constants.montserratNormal.name
-                    pixelSize: 17
-                }
-            }
-        }
-        Rectangle{
-            width: 180 ; height: 44
-            color: 'transparent'
-            border{
-                width: 1
-                color: "gray"
-            }
-            Text{
-                anchors.centerIn: parent
-                text: "Unit"
-                color: Constants.darkTextColor
-                font{
-                    family: Constants.montserratNormal.name
-                    pixelSize: 17
-                }
-            }
-        }
-    }
 
         ListView{
             id: reagentListId
@@ -192,6 +122,82 @@ Rectangle {
                 unit: "mg/L"
             }
         }
+
+        Row{
+        Rectangle{
+            width: 180 ; height: 44
+            gradient: Constants.blueGradient
+//            color: 'transparent'
+//            border{
+//                width: 1
+//                color: "gray"
+//            }
+            Text{
+                anchors.centerIn: parent
+                text: "Item"
+                color: 'white'//Constants.darkTextColor
+                font{
+                    family: Constants.montserratNormal.name
+                    pixelSize: 17
+                }
+            }
+        }
+        Rectangle{
+            width: 180 ; height: 44
+            gradient: Constants.blueGradient
+//            color: 'transparent'
+//            border{
+//                width: 1
+//                color: "gray"
+//            }
+            Text{
+                anchors.centerIn: parent
+                text: "Item No"
+                color: 'white'//Constants.darkTextColor
+                font{
+                    family: Constants.montserratNormal.name
+                    pixelSize: 17
+                }
+            }
+        }
+        Rectangle{
+            width: 180 ; height: 44
+            gradient: Constants.blueGradient
+//            color: 'transparent'
+//            border{
+//                width: 1
+//                color: "gray"
+//            }
+            Text{
+                anchors.centerIn: parent
+                text: "Reference Range"
+                color: 'white'//Constants.darkTextColor
+                font{
+                    family: Constants.montserratNormal.name
+                    pixelSize: 17
+                }
+            }
+        }
+        Rectangle{
+            width: 180 ; height: 44
+            gradient: Constants.blueGradient
+//            color: 'transparent'
+//            border{
+//                width: 1
+//                color: "gray"
+//            }
+            Text{
+                anchors.centerIn: parent
+                text: "Unit"
+                color: 'white'//Constants.darkTextColor
+                font{
+                    family: Constants.montserratNormal.name
+                    pixelSize: 17
+                }
+            }
+        }
+    }
+
     }
     Row{
         x:556 ; y:480

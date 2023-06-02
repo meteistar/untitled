@@ -23,78 +23,104 @@ Rectangle {
         width: 372 ; height: 146
         color: 'white'
         radius: 28
+        Column{
+            anchors.centerIn: parent
+            spacing: 10
+            Row{
+                Text{
+                    width: 91; height: 26
+                    text: 'IP Adress : '
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignLeft
+                    color: Constants.darkTextColor
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: 17
+                    }
+                }
+                Row{
+                    spacing: 8
 
-        Text{
-            x: 23; y:52
-            width: 86; height: 26
-            text: 'IP Adress :'
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-            color: Constants.darkTextColor
-            font{
-                family: Constants.montserratNormal.name
-                pixelSize: 17
+                    Rectangle{
+                        width: 46 ; height: 26
+                        color: 'transparent'
+                        border{
+                            width: 2
+                            color: Constants.darkTextColor
+                        }
+                        TextEdit{
+                            anchors.fill: parent
+                        }
+                    }
+                    Rectangle{
+                        width: 46 ; height: 26
+                        color: 'transparent'
+                        border{
+                            width: 2
+                            color: Constants.darkTextColor
+                        }
+                        TextEdit{
+                            anchors.fill: parent
+                        }
+                    }
+                    Rectangle{
+                        width: 46 ; height: 26
+                        color: 'transparent'
+                        border{
+                            width: 2
+                            color: Constants.darkTextColor
+                        }
+                        TextEdit{
+                            anchors.fill: parent
+                        }
+                    }
+                    Rectangle{
+                        width: 46 ; height: 26
+                        color: 'transparent'
+                        border{
+                            width: 2
+                            color: Constants.darkTextColor
+                        }
+                        TextEdit{
+                            anchors.fill: parent
+                        }
+                    }
+                }
+
             }
-        }
-        Text{
-            x: 20; y:94
-            width: 53; height: 26
-            text: 'Port :'
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-            color: Constants.darkTextColor
-            font{
-                family: Constants.montserratNormal.name
-                pixelSize: 17
+
+            Row{
+                Text{
+                    width: 91; height: 26
+                    text: 'Port : '
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignLeft
+                    color: Constants.darkTextColor
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: 17
+                    }
+                }
+
+                Rectangle{
+                    width: 72 ; height: 26
+                    color: 'transparent'
+                    border{
+                        width: 2
+                        color: Constants.darkTextColor
+                    }
+                    TextEdit{
+                        anchors.fill: parent
+                    }
+                }
             }
         }
 
-        Rectangle{
-            x: 116 ; y: 95
-            width: 72 ; height: 26
-            color: 'transparent'
-            border{
-                width: 2
-                color: Constants.darkTextColor
-            }
-        }
 
-        Row{
-            x: 117 ; y: 52
-            spacing: 8
-            Rectangle{
-                width: 46 ; height: 26
-                color: 'transparent'
-                border{
-                    width: 2
-                    color: Constants.darkTextColor
-                }
-            }
-            Rectangle{
-                width: 46 ; height: 26
-                color: 'transparent'
-                border{
-                    width: 2
-                    color: Constants.darkTextColor
-                }
-            }
-            Rectangle{
-                width: 46 ; height: 26
-                color: 'transparent'
-                border{
-                    width: 2
-                    color: Constants.darkTextColor
-                }
-            }
-            Rectangle{
-                width: 46 ; height: 26
-                color: 'transparent'
-                border{
-                    width: 2
-                    color: Constants.darkTextColor
-                }
-            }
-        }
+
+
+
+
     }
     ////Communication Mode
     Text{
@@ -141,57 +167,68 @@ Rectangle {
         color: 'white'
         radius: 28
 
-        Text{
-            x: 23; y:52
-            width: 86; height: 26
-            text: 'Ethernet :'
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-            color: Constants.darkTextColor
-            font{
-                family: Constants.montserratNormal.name
-                pixelSize: 17
+        Column{
+            spacing: 10
+            anchors.centerIn: parent
+
+            Row{
+                Text{
+//                    x: 23; y:52
+                    width: 91; height: 26
+                    text: 'Ethernet : '
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignLeft
+                    color: Constants.darkTextColor
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: 17
+                    }
+                }
+                Text{
+//                    x: 131; y:52
+                    text: "DA:D5:D6:D5:D4:E1"
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    color: Constants.darkTextColor
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: 17
+                    }
+                }
             }
-        }
-        Text{
-            x: 131; y:52
-            text: "DA:D5:D6:D5:D4:E1"
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-            color: Constants.darkTextColor
-            font{
-                family: Constants.montserratNormal.name
-                pixelSize: 17
+
+            Row{
+                Text{
+                    width: 91; height: 26
+                    text: 'WIFI : '
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignLeft
+                    color: Constants.darkTextColor
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: 17
+                    }
+                }
+                Text{
+                    text: "DA:D5:D6:D5:D4:E1"
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    color: Constants.darkTextColor
+                    font{
+                        family: Constants.montserratNormal.name
+                        pixelSize: 17
+                    }
+                }
             }
         }
 
-        Text{
-            x: 20; y:94
-            width: 53; height: 26
-            text: 'WIFI :'
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-            color: Constants.darkTextColor
-            font{
-                family: Constants.montserratNormal.name
-                pixelSize: 17
-            }
-        }
-        Text{
-            x: 131; y:94
-            text: "DA:D5:D6:D5:D4:E1"
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment: Text.AlignHCenter
-            color: Constants.darkTextColor
-            font{
-                family: Constants.montserratNormal.name
-                pixelSize: 17
-            }
-        }
+
+
+
     }
     ////
     Text{
-        x: 707 //; y: 304
+        x: 707
         anchors.verticalCenter: lisToggleId.verticalCenter
         text: 'LIS :'
         font{
@@ -214,43 +251,6 @@ Rectangle {
        onFirstClicked: console.log("first clicked")
        onSecondClicked: console.log("second clicked")
     }
-
-//    Rectangle{
-//        x: 785 ; y: 304
-//        width: 170 ; height: 37
-//        border{
-//            width: 3
-//            color: Constants.primaryColor
-//        }
-//        color: 'transparent'
-
-//        Rectangle{
-//            width: 88 ; height: 37
-//            color: Constants.primaryColor
-//        }
-
-//        Text{
-//            text: "ON"
-//            width: 88 ; height: 37
-//            font{
-//                family: Constants.montserratNormal.name
-//                pixelSize: 16
-//            }
-//            verticalAlignment: Text.AlignVCenter
-//            horizontalAlignment: Text.AlignHCenter
-//        }
-//        Text{
-//            text: "OFF"
-//            width: 88 ; height: 37
-//            x: 82
-//            font{
-//                family: Constants.montserratNormal.name
-//                pixelSize: 16
-//            }
-//            verticalAlignment: Text.AlignVCenter
-//            horizontalAlignment: Text.AlignHCenter
-//        }
-//    }
 
     Button{
         id: testConnButtonId

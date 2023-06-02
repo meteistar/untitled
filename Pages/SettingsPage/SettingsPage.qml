@@ -11,6 +11,8 @@ BasePage{
 
     buttonTitle: "SETTINGS"
 
+    Component.onCompleted: wifiButtonId.pressedd = true
+
     StackLayout{
         id: settingsStackLayout
         anchors.fill: parent
