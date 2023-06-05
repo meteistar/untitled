@@ -54,6 +54,7 @@ Rectangle {
             anchors.centerIn: parent
             spacing: 17
             TextField{
+                id: userNameId
                 width: 302 ; height: 48
                 placeholderText: "Username"
                 placeholderTextColor: Constants.darkTextColor
@@ -76,9 +77,11 @@ Rectangle {
                 }
             }
             TextField{
+                id: passwordId
                 width: 302 ; height: 48
                 placeholderText: "Password"
                 placeholderTextColor: Constants.darkTextColor
+                echoMode: TextField.Password
                 onFocusChanged: {
                     if(focus){
                         logo.anchors.topMargin = 0
@@ -101,7 +104,12 @@ Rectangle {
             PrimaryButton{
                 width: 302 ; height: 48
                 text: 'Login'
-                onClicked: stackLayout.currentIndex = 1
+                onClicked: {
+                    if(userNameId.text === "" || passwordId.text === "")
+                        return
+                    if(userNameId.text === "admin" && passwordId.text === "123")
+                        stackLayout.currentIndex = 1
+                }
             }
         }
     }
